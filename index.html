@@ -9,7 +9,6 @@
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
         <script src="js/jquery.cookie.js"></script>
-        <script src="js/jquery.smoothState.js"></script>
         
     </head>
     <body>
@@ -23,7 +22,14 @@
         <link rel="stylesheet" href="css/grid.css">
         <link rel="stylesheet" href="css/styles.css">
         <header>
-            <nav class="navbar">
+            <div class="menu-btn">
+                <div class="hamburger" id="hamburger">
+                      <span class="line"></span>
+                      <span class="line"></span>
+                      <span class="line"></span>
+                </div>
+            </div>
+            <div class="navbar">
                 <div class="row social_icons">
                     <a href="#" class="icon_fb">
                         <i class="fab fa-facebook-f fa-lg"></i>
@@ -35,31 +41,18 @@
                         <i class="fab fa-instagram fa-lg"></i>
                     </a>
                 </div>
-                
-                <div class="menu-btn">
-                    <div class="hamburger" id="hamburger">
-                      <span class="line"></span>
-                      <span class="line"></span>
-                      <span class="line"></span>
-                    </div>
-                    
-                </div>
-                <div class="overlay">
-                    <div class="menu">
-                        <ul>
-                            <li><a href="index.html" data-target="0">- Home -</a></li>
-                            <li><a href="about.html" data-target="1">- About Us -</a></li>
-                            <li><a href="beers.html" data-target="2">- Our Beers -</a></li>
-                            <li><a href="contact.html" data-target="3">- Contact -</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        
+                <nav class="stroke">
+                    <ul class="menu">
+                        <li><a href="index.html">- Home -</a></li>
+                        <li><a href="about.html">- About Us -</a></li>
+                        <li><a href="beers.html">- Our Beers -</a></li>
+                        <li><a href="contact.html">- Contact -</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <div id="main">
-        <div class="sceneElement" data-viewport="0">
-          <div class="outer_wrapper clearfix">
+        
+        <div class="outer_wrapper clearfix">
             
             <div class="inner_wrapper">
                 <div class="logo">

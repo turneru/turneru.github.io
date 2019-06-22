@@ -197,9 +197,9 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #476473;
+  background-color: #BD1E1E;
   border-radius: 0px;
-  border: 1px solid #476473;
+  border: 1px solid #BD1E1E;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -213,8 +213,8 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #ffffff !important;
-  border-color: #e27629;
-	background-color: #e27629;
+  border-color: #BD1E1E;
+	background-color: #BD1E1E;
 	text-decoration: none;
   outline: 0; }
 .button.button-primary,
@@ -224,8 +224,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF !important;
-  background-color: #f89922 !important;
-  border-color: #f89922; }
+  background-color: #BD1E1E !important;
+  border-color: #BD1E1E; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -247,8 +247,8 @@ input[type="submit"].button-secondary,
 input[type="reset"].button-secondary,
 input[type="button"].button-secondary {
   color: #ffffff !important;
-  background-color: #00b6ab !important;
-  border-color: #00b6ab; }
+  background-color: #BD1E1E !important;
+  border-color: #BD1E1E; }
 .button.button-secondary:hover,
 button.button-secondary:hover,
 input[type="submit"].button-secondary:hover,
@@ -260,8 +260,8 @@ input[type="submit"].button-secondary:focus,
 input[type="reset"].button-secondary:focus,
 input[type="button"].button-secondary:focus {
   color: #ffffff !important;
-  background-color: #00b6ab !important;
-  border-color: #00b6ab; }
+  background-color: #BD1E1E !important;
+  border-color: #BD1E1E; }
 
 
 /* Forms
@@ -279,14 +279,20 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  padding: 10px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 10px 10px;
+font-size: 14px;
+  font-weight: 500;
+font-family: 'Raleway', sans-serif;
+/* The 6px vertically centers text on FF, ignored by Webkit */
+/*
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 	width: 100%;
-color:#8f9aa5;}
+color:#8f9aa5;*/ }
+
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
@@ -312,7 +318,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #BD1E1E;
   outline: 0; }
 label,
 legend {
