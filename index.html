@@ -7,8 +7,8 @@
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/cookies.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
-        <script src="js/jquery.cookie.js"></script>
         
     </head>
     <body>
@@ -52,11 +52,11 @@
             </div>
         </header>
         
-        <div class="outer_wrapper clearfix">
+        <div class="outer_wrapper">
             
             <div class="inner_wrapper">
                 <div class="logo">
-                    <img src="images/logo.png" style="text-align: center;" />
+                    <a href="index.html"><img src="images/logo.png" style="text-align: center;" /></a>
                 </div>
                 
                 <div class="main_content">
@@ -77,7 +77,58 @@
             
             </div>
           </div>
+        
+        <div id="age-verify" style="display: none;">
+            <div class="window">
+              <span class="title">Are you over 21?</span>
+              <span>To visit our website, you must be of legal drinking age.</span>
+              <button class="yes" id="overAge">Yes</button>
+              <button class="no" id="underAge">No</button>
+              <div class="underBox">
+                <span class="title">Sorry!</span>
+                <span>You need to be at least 21 to visit our website.</span>
+                <button class="back" id="goBack">Go Back</button>
+              </div>
+            </div>
         </div>
-      </div>
+        
     </body>
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+     
+  
+    if ($.cookie('active') == null) {
+        $("#age-verify").css("display", "inherit");
+    }
+  
+        
+//   var active = Cookies.get('active');
+//   if (active == 'yes') {
+//     return false; // cookie active do nothing
+//   } else { //trigger popup and set a cookie
+//     
+//    $("#age-verify").css("display", "inherit");
+//    
+//   }
+   
+    
+    $("#overAge").click( function () {
+      $.cookie('active', 'yes', { expires: 7 }); 
+        $("#age-verify").addClass("hidden");
+        
+    });
+
+     $("#underAge").click( function () {
+      $("#age-verify").addClass("under");
+    });
+
+    $("#goBack").click( function () {
+        window.history.back();
+    });
+    
+ });
+    </script>

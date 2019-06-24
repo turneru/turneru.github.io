@@ -1,56 +1,93 @@
+
+
+
 $(document).ready(function() {
     
-  $(".hamburger").click(function () {
-//        $(".overlay").fadeToggle(800);
-      $(this).toggleClass("is-active");
-//        $(".overlay").toggleClass("overlay-active");
-   });
-
- $('.menu a').on('click', function () {
-//        $(".overlay").fadeToggle(800);
-      $(".hamburger").toggleClass('is-active');
-      
-  });
-    
-    
-    
-    $('.menu-btn').click(function(){
-          $('body').toggleClass('open');
-            
-        });
-    
-    
-
-
-$('.beer1').click( function () {
-    $( ".beer1_bio" ).toggle(200); 
-    $( ".beer_wrapper" ).fadeOut(300);
-});
-    
-
-$('.back').click( function () {
-    $( ".beer1_bio" ).toggle(200); 
-    $( ".beer_wrapper" ).fadeIn(300);
-});    
-    
-//var linkLocation = 0
-//
-//    $("body").css("display", "none");
-// 
-//    $("body").fadeIn(2000);
-// 
-//    $("a.transition").click(function(event){
-//        event.preventDefault();
-//        linkLocation = this.href;
-//        $("body").fadeOut(500, redirectPage);      
-//    });
-//         
-//    function redirectPage() {
-//        window.location = linkLocation;
-//    }
 //    
+//    var active = Cookies.get("verified");
+//    if (active == "yes") {
+//   
+//    return false; // cookie active do nothing
+//    } 
+//    else { 
+//    
+//     $("#age-verify").css("display", "inherit"); // cookie inactive display popup
+//        
+//    }
+    
+
+   
+
+          
+           
     
     
+    
+    $(".hamburger").click(function () {
+      $(this).toggleClass("is-active");
+
+    });
+
+    $(".menu a").on("click", function () {
+      $(".hamburger").toggleClass("is-active");
+      
+    });
+    
+    $(".menu-btn").click(function(){
+          $("body").toggleClass("open");
+            
+    }); 
+    
+    
+    
+    
+    $(".beer1").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer1_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+      
+    $(".beer2").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer2_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+    
+    $(".beer3").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer3_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+    
+    $(".beer4").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer4_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+      
+    $(".beer5").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer5_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+    
+    $(".beer6").click( function () {
+         $(".beer_wrapper").hide( "slide", {direction: "left" }, 300, function() { 
+         $(".beer_nav").show( "slide", {direction: "up" }, 400 );
+             $(".beer6_bio").show( "slide", {direction: "right" }, 400 );
+         });
+    });
+    
+    
+    $(".back").click( function () {
+         $(".beer1_bio, .beer2_bio, .beer3_bio, .beer4_bio, .beer5_bio, .beer6_bio").hide( "slide", {direction: "right" }, 300, function() { 
+         $(".beer_nav").hide( "slide", {direction: "up" }, 400 );
+         $(".beer_wrapper").delay(300).show( "slide", {direction: "left" }, 400);    
+         });
+    });    
 });
-
-

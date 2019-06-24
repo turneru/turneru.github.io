@@ -8,8 +8,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -52,54 +52,168 @@
             </div>
         </header>
         
-        <div class="outer_wrapper_about clearfix">
+        <div class="outer_wrapper beers_bg">
             
             <div class="inner_wrapper">
                 <div class="logo">
-                    <img src="images/logo.png" style="text-align: center;" />
+                    <a href="index.html"><img src="images/logo.png" style="text-align: center;" /></a>
                 </div>
                 
                 <div class="main_content">
-                    <div class="beer_wrapper">
-                        <div class="row">
-                            <div id="#beer1" class="col-md-4 beer_img beer1" style="text-align: center;">
-                                <img src="images/heyZ_white_can.png" class="hvr-wobble-vertical beer_can"/>
-                            </div>
-                            <div class="col-md-4 beer_img" style="text-align: center;">
-                                <a href="#" class="hvr-wobble-vertical"><img src="images/overTheTop_black_can.png" class="beer_can"/></a>
-                            </div>
-                            <div class="col-md-4 beer_img" style="text-align: center;">
-                                <a href="#" class="hvr-wobble-vertical"><img src="images/odin_gold_can.png" class="beer_can"/></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 beer_img" style="text-align: center;">
-                                <a href="#" class="hvr-wobble-vertical"><img src="images/bobby_gold_can.png" class="beer_can"/></a>
-                            </div>
-                            <div class="col-md-4 beer_img" style="text-align: center;">
-                                <a href="#" class="hvr-wobble-vertical"><img src="images/dknobs_white_can.png" class="beer_can"/></a>
-                            </div>
-                            <div class="col-md-4 beer_img" style="text-align: center;">
-                                <a href="#" class="hvr-wobble-vertical"><img src="images/groot_black_can.png" class="beer_can"/></a>
+                    <div class="beer_nav">
+                        <div class="row back">
+                            <div class="col-md-12 col-xs-12">
+                                <img src="images/beer_nav.png" class="img-responsive" />
                             </div>
                         </div>
                     </div>
                     
-                    <div class="beer_bios">
-                        <div class="beer1_bio">
-                            
-                             <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/heyZ_white_can.png" class="beer_can back"/>
+                    <div class="beer_wrapper">
+                        <div class="beer_nav_spacer">
+                            <h1 class="title"><span class="highlight-container"><span class="highlight">Our Beers</span></span></h1>
+                            <p></p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4 beer_img beer1" style="text-align: center;">
+                                <img src="images/heyZ_white_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Hey-Z</span></span></h5>
                             </div>
-                            <div class="col-md-8">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, enim eget mattis varius, eros sapien suscipit orci, ut elementum magna purus a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi nibh enim, fringilla non enim at, tincidunt eleifend purus. Praesent condimentum consectetur magna, vitae facilisis diam euismod ut. Curabitur volutpat elementum ante. Aenean pellentesque metus sed mattis maximus. Nam ac mollis mauris. Proin finibus dapibus placerat.</p>
-
-                            <p>Donec quis congue sem. Pellentesque porta dapibus tincidunt. Nunc porta mollis nisi nec bibendum. Morbi eget malesuada neque. Integer at erat mattis, commodo arcu nec, congue justo. Cras bibendum venenatis tincidunt. Proin hendrerit venenatis sapien, nec porta velit luctus condimentum. Nam placerat risus mollis, bibendum justo nec, lobortis leo. Duis vitae tincidunt mauris.</p>
-
-                            <p>Vivamus pellentesque euismod augue. Mauris tristique orci in urna placerat, eu ultricies sapien sagittis. Etiam finibus imperdiet dolor, at posuere ex condimentum vel. Donec et magna tincidunt, iaculis lectus vitae, sollicitudin ligula. Nulla ut libero eu sem pretium hendrerit. Integer volutpat augue sed risus vulputate ultricies. Etiam in velit vitae enim sollicitudin maximus. Vestibulum enim quam, aliquet ut interdum nec, laoreet eget massa. Quisque non tempus massa. Ut suscipit velit nec porttitor faucibus. Curabitur feugiat lorem dui, pharetra interdum sapien scelerisque non. Nunc porttitor, diam id dictum convallis, enim quam commodo nisl, a consectetur dolor orci vel lorem. Donec pharetra sollicitudin orci id tristique. Fusce suscipit dapibus tortor, nec tincidunt ipsum ornare at. Cras porta, dolor a aliquam eleifend, risus mi suscipit diam, in pulvinar ipsum lacus eu nunc. Nullam tempus facilisis quam, nec interdum massa mattis id.</p>
+                            <div class="col-md-4 beer_img beer2" style="text-align: center;">
+                                <img src="images/overTheTop_black_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Over the Top</span></span></h5>
+                            </div>
+                            <div class="col-md-4 beer_img beer3" style="text-align: center;">
+                               <img src="images/odin_gold_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Odin</span></span></h5>
                             </div>
                         </div>
-                    
+                        <div class="row">
+                            <div class="col-md-4 beer_img beer4" style="text-align: center;">
+                                <img src="images/bobby_gold_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Bobby</span></span></h5>
+                            </div>
+                            <div class="col-md-4 beer_img beer5" style="text-align: center;">
+                                <img src="images/dknobs_white_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Saison D'knobs</span></span></h5>
+                            </div>
+                            <div class="col-md-4 beer_img beer6" style="text-align: center;">
+                                <img src="images/groot_black_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <h5><span class="highlight-container"><span class="highlight">Groot &amp; Heerlijk</span></span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beer_bios">
+                        <div class="beer1_bio clearfix">
+                             <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/heyZ_white_can.png" class="beer_can_info back"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Hey-Z IPA</span></span></h1>
+                                
+                                <p class="sub_title">New England IPA</p>
+                                <hr>
+                                <h3>
+                                    <span class="highlight-container"><span class="highlight">7.5% ABV</span></span> 
+                                    <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="highlight-container"><span class="highlight">38 IBUs</span></span></h3>
+                                <hr>   
+                                <p>Hazy NE Style IPA with Amarillo, Motueka, Citra, Galazy and Mosaic hops</p>
+                            </div>
+                        </div>
+                        <div class="beer2_bio clearfix">
+                            
+                            <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/overTheTop_black_can.png" class="beer_can_info back2"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Over the Top Citra Bomb</span></span></h1>
+                                
+                                <p class="sub_title">American IPA</p>
+                                
+                                <hr>
+                                
+                                 <h3><span class="highlight-container"><span class="highlight">5.6% ABV</span></span> <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span> <span class="highlight-container"><span class="highlight">80 IBUs</span></span></h3>
+                                
+                                 <hr>   
+                                <p>Citra forward IPA with a massive aroma and Citra all the way through.
+                                    Significant dry hopping makes this a hop head favorite. 
+                                    2017 version is hazy and darker than previous years.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="beer3_bio clearfix">
+                             <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/odin_gold_can.png" class="beer_can_info back3"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Odin</span></span></h1>
+                                
+                                <p class="sub_title">Honey Ale</p>
+                                <hr>
+                                <h3>
+                                    <span class="highlight-container"><span class="highlight">6.2% ABV</span></span> 
+                                    <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="highlight-container"><span class="highlight">8 IBUs</span></span></h3>
+                                <hr>   
+                                <p>In Norse mythology, a defining feature of Odin is his' being one-eyed, a result of him having sacrificed his right eye to drink from the Well of Urðr, No sacrifice is needed to drink Odin.  Odin is a combination of Honey Malt, and Biscuit Malt. It has a very approachable almost cracker aroma and a soft sweet nutty finish.  Very limited hop character.</p>
+                            </div>
+                        </div>
+                        <div class="beer4_bio clearfix">
+                             <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/bobby_gold_can.png" class="beer_can_info back4"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Bobby Double IPA</span></span></h1>
+                                
+                                <p class="sub_title">Double IPA</p>
+                                <hr>
+                                <h3>
+                                    <span class="highlight-container"><span class="highlight">8.4% ABV</span></span> 
+                                    <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="highlight-container"><span class="highlight">45 IBUs</span></span></h3>
+                                <hr>   
+                                <p>Hazy citrusy IPA with Weyermann Barke Pilsner malt, early homegrown Chinook and late/dry hopped Simcoe and Citra hops.  Nice creamy mouthfeel and aroma.</p>
+                            </div>
+                        </div>
+                        <div class="beer5_bio clearfix">
+                            
+                            <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/dknobs_white_can.png" class="beer_can_info back5"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Saison D'Knobs</span></span></h1>
+                                
+                                <p class="sub_title">Saison/Farmhouse Ale</p>
+                                
+                                <hr>
+                                
+                                 <h3><span class="highlight-container"><span class="highlight">7.2% ABV</span></span> <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span> <span class="highlight-container"><span class="highlight">18 IBUs</span></span></h3>
+                                
+                                 <hr>   
+                                <p>A refreshing summer Saison fermented at high temps providing elevated levels of banana and other estery notes.  Subtly accented with fresh ginger and orange zest.</p>
+
+                            </div>
+                        </div>
+                        <div class="beer6_bio clearfix">
+                             <div class="col-md-4 beer_img" style="text-align: center;">
+                                 <img src="images/groot_black_can.png" class="beer_can_info back6"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><span class="highlight-container"><span class="highlight">Groot &amp; Heerlijk</span></span></h1>
+                                
+                                <p class="sub_title">Imperial Stout</p>
+                                <hr>
+                                <h3>
+                                    <span class="highlight-container"><span class="highlight">9.6% ABV</span></span> 
+                                    <span style="color: #fff; font-weight: bold;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="highlight-container"><span class="highlight">5 IBUs</span></span></h3>
+                                <hr>   
+                                <p>"Big and Wonderful" Dutch translation.  This is a big 'ol sweet imperial stout with cold pressed coffee and vanilla bean added at bottling.  This is a sipping beer with very low carb.</p>
+                            </div>
+                        </div>
                     </div>
                     
                     

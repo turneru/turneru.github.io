@@ -24,31 +24,108 @@ html {
     width: 100%;
     height: 100%;
     font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #fff;
 }
 
-#main {
-    max-width: 1250px;
-    height: 100%;
+h1 {
+    font-size: 34px;
+    color: #BD1E1E;
+    text-transform: uppercase;
 }
+
+h1.title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #91171F;
+    margin-bottom: 15px;
+}
+
+
+h3 {
+    font-size: 22px;
+    color: #91171F;
+}
+
+h4 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+a {
+    color:#BD1E1E;
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+
+.main_content a {
+	color: #BD1E1E;
+    -webkit-transition: color 0.35s linear;
+    transition: color 0.35s linear;
+}
+
+a, a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.underline {
+  padding-bottom: 5px;
+}
+.underline:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+}
+.underline:hover:before {
+  transform: scaleX(1);
+}
+
 
 .outer_wrapper {
     background-image: url("../images/brewery_bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: left;
     position: absolute;
     min-width: 100%;
     width: 100%;
     min-height: 100%;
 }
 
-.outer_wrapper_about {
-    background-image: url("../images/about_bg.jpg");
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    min-width: 100%;
-    width: 100%;
-    min-height: 100%;
+.about_bg {
+    background-image: url("../images/patio.jpg");
+}
+
+.beers_bg {
+    background-image: url("../images/tanks.jpg");
+    min-height: 1250px;
+}
+
+.contact_bg {
+    background-image: url("../images/aces.jpg");
 }
 
 .inner_wrapper {
@@ -72,10 +149,10 @@ html {
 
 .main_content {
     background-color: rgba(38,38,38,.9);
-    padding: 50px 0;
+    padding: 50px 50px;
     width: 100%;
     margin: 0 auto;
-    min-height: 650px;        /* Remove once content has been added */
+    min-height: 875px;       /* Remove once content has been added */
 }
 
 .footer {
@@ -91,6 +168,104 @@ html {
     text-align: center;
     
 }
+
+
+/* =============== Age Verification Pop Up ==================== 
+   ========================================================*/
+#age-verify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 500ms;
+}
+#age-verify .window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  padding: 40px;
+  margin-left: -200px;
+  margin-top: -125px;
+  background-color: #000;
+  border: 6px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  transition: 500ms;
+}
+#age-verify .window span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#age-verify .window span.title {
+    color: #BD1E1E;
+    font-size: 28px;
+    font-weight: 900;
+}
+#age-verify .window button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 48%;
+  height: 60px;
+  color: #FFF;
+  font-size: 18px;
+  background-color: #BD1E1E;
+  margin-top: 20px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: .2s;
+}
+#age-verify .window button.back {
+  display: block;
+  float: none;
+  margin: auto;
+  background-color: #BD1E1E;
+  color: #fff;
+  margin-top: 20px;
+}
+#age-verify .window button.yes {
+  float: left;
+}
+#age-verify .window button.no {
+  float: right;
+}
+#age-verify .window button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background-color: #f29488;
+}
+#age-verify .window .underBox {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  padding: 40px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  transition: 500ms;
+  box-sizing: border-box;
+}
+
+#age-verify.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+#age-verify.hidden .window {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+#age-verify.under .window .underBox {
+  top: 0%;
+}
+
 
 /* =============== Header & Navigation ==================== 
    ========================================================*/
@@ -217,7 +392,7 @@ html {
 }
 
 nav {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   top: -100%;
   left: 0;
@@ -235,7 +410,7 @@ nav:before {
   bottom: 0;
   left: 0;
   margin: auto;
-  background-color: rgba(18,18,18,.9);
+  background-color: rgba(18,18,18,.95);
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -258,9 +433,9 @@ ul.menu {
     backface-visibility: hidden;
     perspective: 1000;
     color: white;
-    font-size: 28px;
+    font-size: 34px;
     text-transform: uppercase;
-    line-height: 40px;
+    line-height: 44px;
 }
 ul.menu li {
     opacity: 0;
@@ -359,15 +534,100 @@ nav.stroke ul li a:hover:after {
 }
 /* =============== Beers Page styles ========================= 
    ========================================================*/
+.beer_wrapper {
+    width: 100%;
+}
 
 .beer_wrapper .row {
     margin: 0 0 50px 0;
 }
 
-.beer_can {
-    max-width: 160px;
+.beer_nav {
+    display: none;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.beer_nav_spacer{
+    height: 75px;
+    text-align: center;
+}
+
+.beer_bios {
     width: 100%;
     height: auto;
+    padding: 0 50px 0 0;
+}
+
+.beer_img {
+    text-align: center;
+}
+
+.beer_can {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.beer_can_info {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+
+.highlight-container, .highlight-container-white, .highlight {
+  position: relative;
+}
+
+.highlight-container, .highlight-container-white {
+  display: inline-block;
+}
+
+.highlight-container:before, .highlight-container:after, 
+.highlight-container-white:before, .highlight-container-white:after {
+  content: " ";
+  display: block;
+  height: 90%;
+  width: 100%;
+  margin-left: -5px;
+  margin-right: -2px;
+  position: absolute;
+}
+.highlight-container:before {
+  background: rgba(145, 23, 31, 0.9);
+  transform: rotate(-5deg);
+  top: -1px;
+  left: -1px;
+}
+.highlight-container:after {
+    background: rgba(239, 38, 38, 0.6);
+    top: 3px;
+    transform: rotate(2deg);
+    right: -2px;
+}
+.highlight-container .highlight {
+  color: rgba(255,255,255);
+  z-index: 20;
+}
+
+.highlight-container-white:before {
+    background: rgba(255,255,255, 0.9);
+    transform: rotate(4deg);
+    top: 2px;
+    left: 5px;
+}
+.highlight-container-white:after {
+    background: rgba(255,255,255, 0.6);
+    top: 3px;
+    transform: rotate(-5deg);
+    right: 9px;
+}
+.highlight-container-white .highlight {
+  color: rgba(239, 38, 38);
+  z-index: 20;
 }
 
 /* Wobble Vertical */
@@ -442,12 +702,12 @@ nav.stroke ul li a:hover:after {
 }
 
 
-.beer1_bio {
+.beer1_bio, .beer2_bio, .beer3_bio, .beer4_bio, .beer5_bio, .beer6_bio {
 display: none;
     top: 0;
 }
 
-.beer1:hover, .back:hover {
+.beer1:hover, .beer2:hover, .beer3:hover, .beer4:hover, .beer5:hover, .beer6:hover, .back:hover {
     cursor: pointer;
 }
 
@@ -457,10 +717,14 @@ display: none;
    ========================================================*/
 
 .contact_form {
-    margin: 0 auto;
+    margin: 25px auto 0;
     width: 100%;
     max-width: 470px;
     padding: 15px 5px 15px 25px;
+}
+
+.hours, .address {
+    text-align: center;
 }
 
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], 
@@ -571,7 +835,9 @@ color: rgba(245,245,245 ,1) !important;
     margin-bottom: 88px;
 }
     
-    
+ .beer_bios {
+    padding: 0 35px 0;
+}   
     
 }
 
@@ -582,6 +848,10 @@ color: rgba(245,245,245 ,1) !important;
     margin: 0 15px 88px;
     
     }
+    
+    .contact_form {
+        padding: 0;
+    }    
     
 /*------ Navigation & Header -----------*/
     
@@ -601,7 +871,11 @@ color: rgba(245,245,245 ,1) !important;
 @media screen and (max-width: 540px) {
 
 .inner_wrapper {    
-
     margin: 0 0 88px;
     
     }
+    
+.user, .email, .subject, .message {
+    display: none;
+    }
+}
