@@ -7,8 +7,9 @@
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/cookies.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     </head>
     <body>
@@ -56,14 +57,14 @@
             
             <div class="inner_wrapper">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" style="text-align: center;" /></a>
+                    <a href="index.html"><img alt="All In Brewing Logo" src="images/logo.png" style="text-align: center;" /></a>
                 </div>
                 
                 <div class="main_content">
                     <div class="beer_nav">
                         <div class="row back">
                             <div class="col-md-12 col-xs-12">
-                                <img src="images/beer_nav.png" class="img-responsive" />
+                                <img src="images/beer_nav.png" alt="Current Beers" class="img-responsive" />
                             </div>
                         </div>
                     </div>
@@ -76,29 +77,29 @@
                         
                         <div class="row">
                             <div class="col-md-4 beer_img beer1" style="text-align: center;">
-                                <img src="images/heyZ_white_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <img src="images/heyZ_white_can.png" class="hvr-wobble-vertical beer_can" alt="Hey-Z IPA"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Hey-Z</span></span></h5>
                             </div>
                             <div class="col-md-4 beer_img beer2" style="text-align: center;">
-                                <img src="images/overTheTop_black_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <img src="images/overTheTop_black_can.png" class="hvr-wobble-vertical beer_can" alt="Over the Top IPA"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Over the Top</span></span></h5>
                             </div>
                             <div class="col-md-4 beer_img beer3" style="text-align: center;">
-                               <img src="images/odin_gold_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                               <img src="images/odin_gold_can.png" class="hvr-wobble-vertical beer_can" alt="Odin"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Odin</span></span></h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4 beer_img beer4" style="text-align: center;">
-                                <img src="images/bobby_gold_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <img src="images/bobby_gold_can.png" class="hvr-wobble-vertical beer_can" alt="Bobby Double IPA"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Bobby</span></span></h5>
                             </div>
                             <div class="col-md-4 beer_img beer5" style="text-align: center;">
-                                <img src="images/dknobs_white_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <img src="images/dknobs_white_can.png" class="hvr-wobble-vertical beer_can" alt="D'Knobs Saison"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Saison D'knobs</span></span></h5>
                             </div>
                             <div class="col-md-4 beer_img beer6" style="text-align: center;">
-                                <img src="images/groot_black_can.png" class="hvr-wobble-vertical beer_can"/><br />
+                                <img src="images/groot_black_can.png" class="hvr-wobble-vertical beer_can" alt="Groot Heerlijk"/><br />
                                 <h5><span class="highlight-container"><span class="highlight">Groot &amp; Heerlijk</span></span></h5>
                             </div>
                         </div>
@@ -107,7 +108,7 @@
                     <div class="beer_bios">
                         <div class="beer1_bio clearfix">
                              <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/heyZ_white_can.png" class="beer_can_info back"/>
+                                 <img src="images/heyZ_white_can.png" class="beer_can_info back" alt="Hey-Z IPA"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Hey-Z IPA</span></span></h1>
@@ -125,7 +126,7 @@
                         <div class="beer2_bio clearfix">
                             
                             <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/overTheTop_black_can.png" class="beer_can_info back2"/>
+                                 <img src="images/overTheTop_black_can.png" class="beer_can_info back2" alt="Over the Top IPA"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Over the Top Citra Bomb</span></span></h1>
@@ -146,7 +147,7 @@
                         </div>
                         <div class="beer3_bio clearfix">
                              <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/odin_gold_can.png" class="beer_can_info back3"/>
+                                 <img src="images/odin_gold_can.png" class="beer_can_info back3" alt="Odin"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Odin</span></span></h1>
@@ -163,7 +164,7 @@
                         </div>
                         <div class="beer4_bio clearfix">
                              <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/bobby_gold_can.png" class="beer_can_info back4"/>
+                                 <img src="images/bobby_gold_can.png" class="beer_can_info back4" alt="Bobby Double IPA"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Bobby Double IPA</span></span></h1>
@@ -181,7 +182,7 @@
                         <div class="beer5_bio clearfix">
                             
                             <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/dknobs_white_can.png" class="beer_can_info back5"/>
+                                 <img src="images/dknobs_white_can.png" class="beer_can_info back5" alt="D'Knobs Saison"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Saison D'Knobs</span></span></h1>
@@ -199,7 +200,7 @@
                         </div>
                         <div class="beer6_bio clearfix">
                              <div class="col-md-4 beer_img" style="text-align: center;">
-                                 <img src="images/groot_black_can.png" class="beer_can_info back6"/>
+                                 <img src="images/groot_black_can.png" class="beer_can_info back6" alt="Groot Heerlijk"/>
                             </div>
                             <div class="col-md-8">
                                 <h1><span class="highlight-container"><span class="highlight">Groot &amp; Heerlijk</span></span></h1>
@@ -228,10 +229,21 @@
                     </p>
                 
                 </div>
-            
-            
-        
+            </div>
         </div>
-      </div>
+        <div id="age-verify" style="display: none;">
+            <div class="window">
+              <span class="title">Are you over 21?</span>
+              <span>To visit our website, you must be of legal drinking age.</span>
+              <button class="yes" id="overAge">Yes</button>
+              <button class="no" id="underAge">No</button>
+              
+            <div class="underBox">
+                <span class="title">Sorry!</span>
+                <span>You need to be at least 21 to visit our website.</span>
+                <button class="back" id="goBack">Go Back</button>
+              </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,26 +1,24 @@
 
-
-
-$(document).ready(function() {
-    
-//    
-//    var active = Cookies.get("verified");
-//    if (active == "yes") {
-//   
-//    return false; // cookie active do nothing
-//    } 
-//    else { 
-//    
-//     $("#age-verify").css("display", "inherit"); // cookie inactive display popup
-//        
-//    }
-    
-
+ $(document).ready(function() {
+     
+  
+    if ($.cookie('active') == null) {
+        $("#age-verify").css("display", "inherit");
+    }
    
+    $("#overAge").click( function () {
+      $.cookie('active', 'yes', { expires: 7 }); 
+        $("#age-verify").addClass("hidden");
+        
+    });
 
-          
-           
-    
+     $("#underAge").click( function () {
+      $("#age-verify").addClass("under");
+    });
+
+    $("#goBack").click( function () {
+        window.history.back();
+    });
     
     
     $(".hamburger").click(function () {
@@ -37,8 +35,6 @@ $(document).ready(function() {
           $("body").toggleClass("open");
             
     }); 
-    
-    
     
     
     $(".beer1").click( function () {

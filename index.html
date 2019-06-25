@@ -9,6 +9,7 @@
         <script src="js/main.js"></script>
         <script src="js/cookies.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         
     </head>
     <body>
@@ -54,16 +55,18 @@
         
         <div class="outer_wrapper">
             
-            <div class="inner_wrapper">
+            <div class="home_wrapper">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" style="text-align: center;" /></a>
+                    <a href="index.html"><img alt="All In Brewing Logo" src="images/logo.png" style="text-align: center;" /></a>
                 </div>
                 
+<!--
                 <div class="main_content">
                 
                 
                 </div>
             
+-->
                 <div class="footer">
                     <p><strong>All In Brewing Company</strong><br />
                     3528 Lafayette Pkwy<br />
@@ -71,12 +74,9 @@
                     502.523.5191
                     </p>
                 
-                </div>
-            
-            
-            
+                </div>            
             </div>
-          </div>
+        </div>
         
         <div id="age-verify" style="display: none;">
             <div class="window">
@@ -95,40 +95,4 @@
     </body>
 </html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
-<script>
- $(document).ready(function() {
-     
-  
-    if ($.cookie('active') == null) {
-        $("#age-verify").css("display", "inherit");
-    }
-  
-        
-//   var active = Cookies.get('active');
-//   if (active == 'yes') {
-//     return false; // cookie active do nothing
-//   } else { //trigger popup and set a cookie
-//     
-//    $("#age-verify").css("display", "inherit");
-//    
-//   }
-   
-    
-    $("#overAge").click( function () {
-      $.cookie('active', 'yes', { expires: 7 }); 
-        $("#age-verify").addClass("hidden");
-        
-    });
-
-     $("#underAge").click( function () {
-      $("#age-verify").addClass("under");
-    });
-
-    $("#goBack").click( function () {
-        window.history.back();
-    });
-    
- });
-    </script>

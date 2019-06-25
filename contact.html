@@ -7,8 +7,9 @@
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/cookies.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         
     </head>
     <body>
@@ -56,7 +57,7 @@
             
             <div class="inner_wrapper">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" style="text-align: center;" /></a>
+                    <a href="index.html"><img alt="All In Brewing Logo" src="images/logo.png" style="text-align: center;" /></a>
                 </div>
                 
                 <div class="main_content">
@@ -121,10 +122,22 @@
                     </p>
                 
                 </div>
-            
-            
-            
             </div>
-          </div>
+        </div>
+        
+        <div id="age-verify" style="display: none;">
+            <div class="window">
+              <span class="title">Are you over 21?</span>
+              <span>To visit our website, you must be of legal drinking age.</span>
+              <button class="yes" id="overAge">Yes</button>
+              <button class="no" id="underAge">No</button>
+              
+            <div class="underBox">
+                <span class="title">Sorry!</span>
+                <span>You need to be at least 21 to visit our website.</span>
+                <button class="back" id="goBack">Go Back</button>
+              </div>
+            </div>
+        </div>
     </body>
 </html>
