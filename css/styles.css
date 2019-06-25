@@ -991,7 +991,8 @@ input:-ms-input-placeholder {
 .inner_wrapper {
     width: 65%;
 }
-
+}
+    
 @media only screen and (max-width: 1024px){
 
 .home_wrapper {
