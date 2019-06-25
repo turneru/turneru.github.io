@@ -112,6 +112,7 @@ a:before, a:after, a > span:before, a > span:after {
     min-width: 100%;
     width: 100%;
     min-height: 100%;
+    margin-top: 56px;
 }
 
 .about_bg {
@@ -1074,5 +1075,9 @@ ul.menu {
 .beer_can_info {
     margin-bottom: 10px;
 }
+    
+.flip-card-back {
+        display: none;
+    }
 
 }
