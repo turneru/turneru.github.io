@@ -1079,5 +1079,8 @@ ul.menu {
 .flip-card-back {
         display: none;
     }
-
+    
+.winners {
+    width: 100%;
+    }
 }
