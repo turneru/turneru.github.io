@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>All In Brewing Company</title>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -57,7 +58,16 @@
             
             <div class="inner_wrapper">
                 <div class="logo">
-                    <a href="index.html"><img alt="All In Brewing Logo" src="images/logo.png" style="text-align: center;" /></a>
+                    <div class="flip-card-sub">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <a href="index.html"><img alt="All In Brewing Logo" src="images/logo_white_small.png" /></a>
+                            </div>
+                            <div class="flip-card-back">
+                                <a href="index.html"><img alt="All In Brewing Logo" src="images/logo_red_small.png" /></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="main_content">
@@ -66,19 +76,17 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 col-xs-12 address">
-                            <h2><span class="highlight-container-white"><span class="highlight">Address</span></span></h2>
+                            <h2><span class="highlight-container"><span class="highlight">Address</span></span></h2>
                             <p>3528 Lafayette Pkwy<br />
                             Floyds Knobs, IN 47119
                             </p>
                             <p>502-523-5191</p>
 
                             <p><a class="underline" href="https://www.google.com/maps/place/3528+Lafayette+Pkwy,+Floyds+Knobs,+IN+47119/@38.3283896,-85.8630871,17z/data=!3m1!4b1!4m5!3m4!1s0x886969587a3ba521:0x8dba115ae434ccc4!8m2!3d38.3283854!4d-85.8608984" target="_blank">Get Directions</a></p>
-
-
                         </div>
 
                         <div class="col-md-4 col-xs-12 hours">
-                            <h2><span class="highlight-container-white"><span class="highlight">Hours</span></span></h2>
+                            <h2><span class="highlight-container"><span class="highlight">Hours</span></span></h2>
                             <p>Mon-Thur / 2pm–10pm<br />
                             Fri / 2pm–11pm<br />
                             Sat / Noon–11pm<br />
@@ -87,7 +95,6 @@
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                    
                     
                     <div class="contact_form">
                         <p style="text-align: center;">Or shoot us a message via the form below!</p>
@@ -107,7 +114,7 @@
                                 <textarea rows="10" cols="40" class="form_field" placeholder="Message"></textarea> 
                                     <span class="fas fa-comment message"></span><br/>
 
-                                <input type="submit" value="Send a message" id="submit_button">
+                                <input type="submit" value="Send a message" id="submit_button" class="btn-pulse-w-pause">
                             </form>
  
                     </div>
@@ -118,7 +125,7 @@
                     <p><strong>All In Brewing Company</strong><br />
                     3528 Lafayette Pkwy<br />
                     Floyds Knobs, IN 47119<br />
-                    502.523.5191
+                     <a href="" class="underline">info@allinbrewing.com</a>
                     </p>
                 
                 </div>
