@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Turner Uligian | Web Developer</title>
+        <title>Turner Uligian | Front-End Web Developer</title>
         
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
         
@@ -19,146 +20,147 @@
         <link rel="stylesheet" href="css/animation.css">
         
         <header>
-            <span class="nav_anchor"><a name="top"></a></span>
+<!--            <span class="nav_anchor"><a id="intro"></a></span>-->
             <nav class="top">
                 <div class="container">
                     <div class="row no-margin">
                         <div class="three columns">
-                            <div class="logo">
-                                <a href="#top"><img src="images/logo_multi_green_small.png"></a>
+                            <div class="logo fade-in delay100">
+                                <a href="/" class="scroll"><img src="images/logo_tu.png"></a>
                             </div>
                         </div>
                         <div class="nine columns">
                             <ul class="menu">
-                                <li><a class="underline" href="#about">About</a></li>
-                                <li><a class="underline" href="#projects">Projects</a></li>
-                                <li><a class="underline" href="#contact">Contact</a></li>
+                                <li><a class="underline scroll fade-in-top delay300" href="#about">About</a></li>
+                                <li><a class="underline scroll fade-in-top delay500" href="#projects">Projects</a></li>
+                                <li><a class="underline scroll fade-in-top delay700" href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
             <div id="header_border" class="color-change-3x"></div>
-            
         </header>
             
+<!--
             <div class="side">
-                <a href="#top">
+                <a href="#top" class="scroll">
                     <div id="btn1" class="side_btn">
                         <img src="images/logo_sidenav_white.png">
                     </div>
                 </a>
-                <a href="#about">
+                <a href="#about" class="scroll">
                   <div id="btn2" class="side_btn">
                     <span>About</span>
                   </div>
                 </a>
-                <a href="#projects">
+                <a href="#projects" class="scroll">
                   <div id="btn3" class="side_btn">
                     <span>Projects</span>
                   </div>
                 </a>
-                <a href="#contact">
+                <a href="#contact" class="scroll">
                   <div id="btn4" class="side_btn">
                     <span>Contact</span>
                   </div>
                 </a>
             </div>
+-->
         
             
         <div id="main_content">
             
             <div id="intro_wrapper">
-                <span class="nav_anchor"><a name="intro"></a></span>
+                <span class="nav_anchor"><a id="intro"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
-                           <p class="hello tracking-in-expand">Hello, I'm Turner Uligian.</p>
+							<div class="intro_container">
+								<p class="hello tracking-in-expand delay1200">Hi, I'm <span>Turner Uligian</span></p>
 
-                            <p class="intro text-focus-in">I'm a Front-End Web Developer based in Chicago, Illinois.</p>
-                            
-                            <p class="intro text-focus-in">My passion is creating fun, interactive websites that enhance the user experience.</p>
+								<p class="intro fade-in-bottom delay1400">I'm a front-end web developer based in Chicago, Illinois.</p>
+								<p class="intro fade-in-bottom delay1500">My passion is creating interactive websites that enhance the user experience. Currently, I'm focused on building websites, CMS templates/skins, and AMS portals for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
+							</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="twelve columns center intro_arrow bounce-in-top">
-                           <a href="#about"><img src="images/down_arrow.png" class="heartbeat"/></a>
+                        <div class="twelve columns center intro_arrow fade-in-bottom delay2000">
+                           <a href="#about" class="scroll"><img src="images/down_arrow.png" class="heartbeat"/></a>
                         </div>
                     </div>
                 </div>    
             </div>
             
             <div id="about_wrapper">
-                <span class="nav_anchor"><a name="about"></a></span>
+                <span class="nav_anchor"><a id="about"></a></span>
                 <div class="container">
                     <div class="row">
-<!--
-                        <div class="one columns">
-                            &nbsp;
-                        </div>
--->
                         <div class="six columns">
-                            <div class="skill_col skill_left">
-                                <p class="center"><img src="images/icon_design.png"/></p>
-                                <p class="skill_title">Design</p>
-                                <p>SKILLS GO HERE</p>
+                            <div class="skill_col skill_left delay200">
+                                <p class="skill_icon center delay300"><img src="images/icon_design.png"/></p>
+                                <p class="skill_title delay400">Design</p>
+                                <ul class="skill_list delay500">
+									<li>Adobe Photoshop</li>
+									<li>Adobe XD</li>
+									<li>Figma</li>
+								</ul>
                             </div>
                         </div>
-<!--
-                        <div class="one columns">
-                            &nbsp;
-                        </div>
--->
                         <div class="six columns">
-                            <div class="skill_col skill_right">
-                                <p class="center"><img src="images/icon_dev.png"/></p>
-                                <p class="skill_title">Development</p>
-                                <p>SKILLS GO HERE</p>
+                            <div class="skill_col skill_right delay200">
+                                <p class="skill_icon center delay300"><img src="images/icon_dev.png"/></p>
+                                <p class="skill_title delay400">Development</p>
+                                <ul class="skill_list delay500">
+									<li>HTML5</li>
+									<li>CSS3
+										<ul>
+											<li>Boostrap</li>
+											<li>Grid</li>
+											<li>Flexbox</li>
+										</ul>
+									</li>
+									<li>jQuery</li>
+								</ul>
                             </div>
                         </div>
-<!--
-                        <div class="one columns">
-                            &nbsp;
-                        </div>
--->
                     </div>
                 </div>    
             </div>
             
             
             <div id="projects_wrapper">
-                <span class="nav_anchor"><a name="projects"></a></span>
+                <span class="nav_anchor"><a id="projects"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="four columns">
-                            <div class="project_tile center">
+                            <div class="project_tile center delay400">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center">
+                            <div class="project_tile center delay500">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center">
+                            <div class="project_tile center delay600">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
                     </div>
                     <div class="row">
                         <div class="four columns">
-                            <div class="project_tile center">
+                            <div class="project_tile center delay700">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center">
+                            <div class="project_tile center delay800">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
-                        <div class="four columns">
-                            <div class="project_tile center">
+						<div class="four columns">
+                            <div class="project_tile center delay900">
                                 <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
                             </div>    
                         </div>
@@ -166,9 +168,8 @@
                 </div>
             </div>
             
-            
             <div id="contact_wrapper">
-                <span class="nav_anchor"><a name="contact"></a></span>
+                <span class="nav_anchor"><a id="contact"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -177,9 +178,57 @@
                             <p>Are you looking for a creative front-end developer for your team or project?</p>
                             
                             <p><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
-                
-                            
+							
+							
+							
+							
+<!--
+							<form class="b-form" action="https://formspree.io/tuligian@gmail.com" method="POST">
+							<input type="hidden" name="_subject" value="[eina.ca]">
+							<div class="b-field">
+							  <label for="sender" class="b-field__label">Name</label>
+							  <input type="text" name="sender" id="sender" class="b-field__input">
+							<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
+						   <div class="b-field">
+							 <label for="sender-email" class="b-field__label">Email</label>
+							  <input type="email" name="sender-email" id="sender-email" class="b-field__input">
+							</div>
+							<div class="b-field">
+							  <label for="message" class="b-field__label">Message</label>
+							  <textarea id="message" name="message" rows="5" cols="33" class="b-field__input"></textarea>  
+							</div>
+							<input type="hidden" name="_replyto">
+							<input type="hidden" name="_next" value="https://eina.ca/thank-you">
+						  <button type="submit" class="b-form__submit">Send Message</button>
+						  </form>
+-->
+							
                         </div>
+						<style>
+						label {
+							display: inline-block;
+						}
+						</style>
+						<div class="col-md-4">&nbsp;</div>
+						<div class="col-md-4 left">
+							<form action="https://formspree.io/tuligian@gmail.com" method="POST">
+								<div>
+									<input type="hidden" name="_subject" value="[turneruligian.com]">
+									<label for="name">Name</label>
+									<input type="text" name="name">
+								</div>
+								<div>
+									<label for="_replyto">Email</label>
+									<input type="email" name="_replyto">
+								</div>
+								<div>
+									<label for="message">Message</label>
+									<textarea id="message" name="message" rows="5" cols="33"></textarea>
+								</div>
+								<input type="submit" value="Send">
+							</form>
+						</div>
+						<div class="col-md-4">&nbsp;</div>
                         <div class="col-md-12">
                             <div class="row social_icons">
                                 <a href="#" class="icon_linkedin">
@@ -199,14 +248,76 @@
                     </div>
                     <div class="row">
                         <div class="twelve columns center contact_arrow bounce-in-top">
-                           <a href="#top"><img src="images/up_arrow.png" class="heartbeat"/></a>
+                           <a href="#intro_wrapper" class="scroll"><img src="images/up_arrow.png" class="heartbeat"/></a>
                         </div>
                     </div>
                 </div>    
             </div>  
 
-        
         </div>
+		
+<script>
+$(document).ready(function() {		
+$(".scroll").click(function(event){
+	event.preventDefault();
+
+		var dest=0;
+
+		if ($(this.hash).offset().top > $(document).height()-$(window).height()) {
+			dest=$(document).height()-$(window).height();
+		}
+
+		else {
+			dest=$(this.hash).offset().top - 100;
+		}
+		//go to destination
+		$('html,body').animate({scrollTop:dest}, 100,'linear');
+	}); 
+	
+	function isIntoView(elem) {
+		var documentViewTop = $(window).scrollTop();
+		var documentViewBottom = documentViewTop + $(window).height();
+
+		var elementTop = $(elem).offset().top;
+		var elementBottom = elementTop + $(elem).height();
+
+		return ((elementBottom <= documentViewBottom) && (elementTop >= documentViewTop));
+	}
+	
+	 $(window).scroll(function() {
+		 
+		if (isIntoView($("#intro_wrapper"))){
+			$("ul.menu li").removeClass("active_menu");
+		} 
+		 
+		else if (isIntoView($("#about_wrapper"))){
+			$("#projects_wrapper, #contact_wrapper").removeClass("active_section");
+			$("#about_wrapper").addClass("active_section");
+			$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active_menu");
+			$("ul.menu li:nth-of-type(1)").addClass("active_menu");
+			$(".skill_left, .skill_right, .skill_icon, .skill_title, .skill_list").addClass("fade-in-bottom");
+			//$(".skill_right").addClass("slide-in-right");
+		}
+		 
+		else if (isIntoView($("#projects_wrapper"))){
+			$("#about_wrapper, #contact_wrapper").removeClass("active_section");
+			$("#projects_wrapper").addClass("active_section");
+			$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(3)").removeClass("active_menu");
+			$("ul.menu li:nth-of-type(2)").addClass("active_menu");
+			$(".project_tile").addClass("fade-in-bottom");
+		}
+		 
+		else if (isIntoView($("#contact_wrapper"))){
+			$("#about_wrapper, #projects_wrapper").removeClass("active_section");
+			$("#contact_wrapper").addClass("active_section");
+			$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(2)").removeClass("active_menu");
+			$("ul.menu li:nth-of-type(3)").addClass("active_menu");
+		} 
+	});		
+	
+});		
+</script>		
+		
     </body>
 </html>
 
