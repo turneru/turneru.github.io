@@ -6,43 +6,42 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Turner Uligian | Front-End Web Developer</title>
         
-<!--        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
-        
-    </head>
-    <body>
-        
-        <link rel="stylesheet" href="css/skeleton.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/skeleton.css">
         <link rel="stylesheet" href="css/grid.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/animation.css">
+    </head>
+    <body>
         
         <header>
-<!--            <span class="nav_anchor"><a id="intro"></a></span>-->
             <nav class="top">
                 <div class="container">
                     <div class="row no-margin">
                         <div class="three columns">
-                            <div class="logo fade-in delay100">
-                                <a href="/" class="scroll"><img src="images/logo_tu.png"></a>
+                            <div class="logo fade-in delay200">
+                                <a href="#intro_wrapper" class="scroll"><img src="images/logo_tu.png"></a>
                             </div>
                         </div>
                         <div class="nine columns">
                             <ul class="menu">
-                                <li><a class="underline scroll fade-in-top delay300" href="#about">About</a></li>
-                                <li><a class="underline scroll fade-in-top delay500" href="#projects">Projects</a></li>
-                                <li><a class="underline scroll fade-in-top delay700" href="#contact">Contact</a></li>
+                                <li><a class="underline scroll fade-in-top delay500" href="#about_wrapper">About</a></li>
+                                <li><a class="underline scroll fade-in-top delay700" href="#projects_wrapper">Projects</a></li>
+                                <li><a class="underline scroll fade-in-top delay900" href="#contact_wrapper">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
             <div id="header_border" class="color-change-3x"></div>
-        </header>
-            
-<!--
+        </header>      
+		<!--
             <div class="side">
                 <a href="#top" class="scroll">
                     <div id="btn1" class="side_btn">
@@ -65,18 +64,17 @@
                   </div>
                 </a>
             </div>
--->
-        
-            
-        <div id="main_content">
-            
+		-->   
+		<div id="main_content">
+   <!-------------------------- Intro Section ---------------------------------->          
             <div id="intro_wrapper">
                 <span class="nav_anchor"><a id="intro"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
 							<div class="intro_container">
-								<p class="hello tracking-in-expand delay1200">Hi, I'm <span>Turner Uligian</span></p>
+								<p class="intro tracking-in-expand delay1000">Hi, I'm</p>
+								<p class="hello tracking-in-expand delay1200"><span>Turner Uligian</span></p>
 
 								<p class="intro fade-in-bottom delay1400">I'm a front-end web developer based in Chicago, Illinois.</p>
 								<p class="intro fade-in-bottom delay1500">My passion is creating interactive websites that enhance the user experience. Currently, I'm focused on building websites, CMS templates/skins, and AMS portals for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
@@ -90,125 +88,128 @@
                     </div>
                 </div>    
             </div>
-            
+<!-------------------------- About Section ---------------------------------->          
             <div id="about_wrapper">
                 <span class="nav_anchor"><a id="about"></a></span>
                 <div class="container">
                     <div class="row">
-                        <div class="six columns">
-                            <div class="skill_col skill_left delay200">
-                                <p class="skill_icon center delay300"><img src="images/icon_design.png"/></p>
-                                <p class="skill_title delay400">Design</p>
-                                <ul class="skill_list delay500">
-									<li>Adobe Photoshop</li>
-									<li>Adobe XD</li>
-									<li>Figma</li>
-								</ul>
-                            </div>
-                        </div>
-                        <div class="six columns">
-                            <div class="skill_col skill_right delay200">
-                                <p class="skill_icon center delay300"><img src="images/icon_dev.png"/></p>
-                                <p class="skill_title delay400">Development</p>
-                                <ul class="skill_list delay500">
-									<li>HTML5</li>
-									<li>CSS3
-										<ul>
-											<li>Boostrap</li>
-											<li>Grid</li>
-											<li>Flexbox</li>
-										</ul>
-									</li>
-									<li>jQuery</li>
-								</ul>
-                            </div>
-                        </div>
+						<div class="twelve columns">
+							<div class="skill_container delay300">
+								<div class="row">
+									<div class="six columns">
+										<div class="skill_left">
+											<p class="skill_icon center delay400"><img src="images/icon_design.png"/></p>
+											<p class="skill_title delay500">Design</p>
+											<ul class="skill_list delay600">
+												<li>Adobe Photoshop</li>
+												<li>Adobe XD</li>
+												<li>Figma</li>
+											</ul>
+										</div>
+									</div>
+									<div class="six columns">
+										<div class="skill_right">
+											<p class="skill_icon center delay400"><img src="images/icon_dev.png"/></p>
+											<p class="skill_title delay500">Development</p>
+											<ul class="skill_list delay600">
+												<li>HTML5</li>
+												<li>CSS3
+													<ul>
+														<li>Boostrap</li>
+														<li>Grid</li>
+														<li>Flexbox</li>
+													</ul>
+												</li>
+												<li>jQuery</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
                     </div>
                 </div>    
             </div>
-            
-            
+<!-------------------------- Projects Section ---------------------------------->  
+			<!--- Screen size for images 1650x910 --->
             <div id="projects_wrapper">
                 <span class="nav_anchor"><a id="projects"></a></span>
                 <div class="container">
-                    <div class="row">
+					<h2 class="delay200">My Recent Work</h2>
+                    <div class="row" style="margin-bottom: 100px;">
                         <div class="four columns">
                             <div class="project_tile center delay400">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/naon.jpg" alt="NAON" class="img-responsive"/>
+								<div class="project_info">
+									<p>National Association of Orthopaedic Nurses Website</p>
+									<a href="http://www.orthonurse.org/" target="_blank" class="button">Visit</a>
+								</div>	
                             </div>    
                         </div>
                         <div class="four columns">
                             <div class="project_tile center delay500">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/eval.jpg" alt="AEA" class="img-responsive"/>
+								<div class="project_info">
+									<p>American Evaluation Association Website</p>
+									<a href="https://www.eval.org/" target="_blank" class="button">Visit</a>
+								</div>
                             </div>    
                         </div>
                         <div class="four columns">
                             <div class="project_tile center delay600">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/bscai.jpg" alt="BSCAI Conference" class="img-responsive"/>
+								<div class="project_info">
+									<p>Building Service Contactors Assocation International 2022 Conference Website</p>
+									<a href="https://convention.bscai.org/" target="_blank" class="button">Visit</a>
+								</div>
                             </div>    
                         </div>
                     </div>
                     <div class="row">
                         <div class="four columns">
                             <div class="project_tile center delay700">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/eval_conf.jpg" alt="Evaluation Conference" class="img-responsive"/>
+								<div class="project_info">
+									<p>American Evaluation Association 2022 Conference Website</p>
+									<a href="https://www.evaluationconference.org/" target="_blank" class="button">Visit</a>
+								</div>
                             </div>    
                         </div>
                         <div class="four columns">
                             <div class="project_tile center delay800">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/caate.jpg" alt="CAATE" class="img-responsive"/>
+								<div class="project_info">
+									<p>Commision on Accreditation of Athletic Training Education Website</p>
+									<a href="https://caate.net/" target="_blank" class="button">Visit</a>
+								</div>
                             </div>    
                         </div>
 						<div class="four columns">
                             <div class="project_tile center delay900">
-                                <img src="https://www.worldanvil.com/uploads/images/73dd3b7f6fe858a9f78670241e0e24ab.png" class="img-responsive"/>
+                                <img src="images/te.jpg" alt="Turner and Emily's Wedding" class="img-responsive"/>
+								<div class="project_info">
+									<p>Turner &amp; Emily Uligian's Wedding Website</p>
+									<a href="https://turnerandemily.com/" target="_blank" class="button">Visit</a>
+								</div>
                             </div>    
                         </div>
                     </div>
                 </div>
             </div>
-            
+<!-------------------------- Contact Section ---------------------------------->             
             <div id="contact_wrapper">
                 <span class="nav_anchor"><a id="contact"></a></span>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <p class="contact_title">Let's work together!</p>
+                        <div class="twelve columns">
+                            <p class="contact_title delay200">Let's work together!</p>
                             
-                            <p>Are you looking for a creative front-end developer for your team or project?</p>
+                            <p class="contact_text delay300">Are you looking for a creative front-end developer for your team or project?</p>
                             
-                            <p><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
-							
-							
-							
-							
+                            <p class="contact_text delay400"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
+						</div>
+					</div>	
 <!--
-							<form class="b-form" action="https://formspree.io/tuligian@gmail.com" method="POST">
-							<input type="hidden" name="_subject" value="[eina.ca]">
-							<div class="b-field">
-							  <label for="sender" class="b-field__label">Name</label>
-							  <input type="text" name="sender" id="sender" class="b-field__input">
-							<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
-						   <div class="b-field">
-							 <label for="sender-email" class="b-field__label">Email</label>
-							  <input type="email" name="sender-email" id="sender-email" class="b-field__input">
-							</div>
-							<div class="b-field">
-							  <label for="message" class="b-field__label">Message</label>
-							  <textarea id="message" name="message" rows="5" cols="33" class="b-field__input"></textarea>  
-							</div>
-							<input type="hidden" name="_replyto">
-							<input type="hidden" name="_next" value="https://eina.ca/thank-you">
-						  <button type="submit" class="b-form__submit">Send Message</button>
-						  </form>
--->
-							
-                        </div>
-						<style>
-						label {
-							display: inline-block;
-						}
-						</style>
 						<div class="col-md-4">&nbsp;</div>
 						<div class="col-md-4 left">
 							<form action="https://formspree.io/tuligian@gmail.com" method="POST">
@@ -229,8 +230,10 @@
 							</form>
 						</div>
 						<div class="col-md-4">&nbsp;</div>
-                        <div class="col-md-12">
-                            <div class="row social_icons">
+-->
+					<div class="row">
+                        <div class="twelve columns">
+                            <div class="social_icons delay500">
                                 <a href="#" class="icon_linkedin">
                                     <i class="fab fa-linkedin-in fa-lg"></i>
                                 </a>
@@ -247,77 +250,42 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="twelve columns center contact_arrow bounce-in-top">
+                        <div class="twelve columns center contact_arrow delay800">
                            <a href="#intro_wrapper" class="scroll"><img src="images/up_arrow.png" class="heartbeat"/></a>
                         </div>
                     </div>
                 </div>    
             </div>  
-
         </div>
 		
-<script>
-$(document).ready(function() {		
-$(".scroll").click(function(event){
-	event.preventDefault();
+		<script>
+		$(document).ready(function() {		
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				var dest=0;
+				if ($(this.hash).offset().top > $(document).height()-$(window).height()) {
+					dest=$(document).height()-$(window).height();
+				}
+				else {
+					if ($(this).hasClass("underline")) {
+							$("ul.menu li").removeClass("active_menu");
+							$(this).parent().addClass("active_menu");
+						}
+					dest=$(this.hash).offset().top - 100;
+				}
+				//go to destination
+				$('html,body').animate({scrollTop:dest}, 100,'linear');
+			}); 
 
-		var dest=0;
-
-		if ($(this.hash).offset().top > $(document).height()-$(window).height()) {
-			dest=$(document).height()-$(window).height();
-		}
-
-		else {
-			dest=$(this.hash).offset().top - 100;
-		}
-		//go to destination
-		$('html,body').animate({scrollTop:dest}, 100,'linear');
-	}); 
-	
-	function isIntoView(elem) {
-		var documentViewTop = $(window).scrollTop();
-		var documentViewBottom = documentViewTop + $(window).height();
-
-		var elementTop = $(elem).offset().top;
-		var elementBottom = elementTop + $(elem).height();
-
-		return ((elementBottom <= documentViewBottom) && (elementTop >= documentViewTop));
-	}
-	
-	 $(window).scroll(function() {
-		 
-		if (isIntoView($("#intro_wrapper"))){
-			$("ul.menu li").removeClass("active_menu");
-		} 
-		 
-		else if (isIntoView($("#about_wrapper"))){
-			$("#projects_wrapper, #contact_wrapper").removeClass("active_section");
-			$("#about_wrapper").addClass("active_section");
-			$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active_menu");
-			$("ul.menu li:nth-of-type(1)").addClass("active_menu");
-			$(".skill_left, .skill_right, .skill_icon, .skill_title, .skill_list").addClass("fade-in-bottom");
-			//$(".skill_right").addClass("slide-in-right");
-		}
-		 
-		else if (isIntoView($("#projects_wrapper"))){
-			$("#about_wrapper, #contact_wrapper").removeClass("active_section");
-			$("#projects_wrapper").addClass("active_section");
-			$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(3)").removeClass("active_menu");
-			$("ul.menu li:nth-of-type(2)").addClass("active_menu");
-			$(".project_tile").addClass("fade-in-bottom");
-		}
-		 
-		else if (isIntoView($("#contact_wrapper"))){
-			$("#about_wrapper, #projects_wrapper").removeClass("active_section");
-			$("#contact_wrapper").addClass("active_section");
-			$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(2)").removeClass("active_menu");
-			$("ul.menu li:nth-of-type(3)").addClass("active_menu");
-		} 
-	});		
-	
-});		
-</script>		
-		
+			$(window).scroll(function() {
+				activeSection();
+				
+			});	
+			
+			activeSection();
+			
+		});	
+		</script>	
     </body>
 </html>
 

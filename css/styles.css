@@ -50,15 +50,15 @@ header {
 }
 
 a, a:link, a:visited, a > span {
-  position: relative;
-  color:#419d78;
-  text-decoration: none;
+	position: relative;
+	color:#419d78;
+	text-decoration: none;
 }
 
 a:before, a:after, a > span:before, a > span:after {
-  content: '';
-  position: absolute;
-  transition: transform .5s ease;
+	content: '';
+	position: absolute;
+	transition: transform .5s ease;
 }
 
 p {
@@ -129,12 +129,15 @@ ul.menu li a {
 
 ul.menu li a:hover, ul.menu li.active_menu a {
     color: #419d78;
+	font-weight: 700;
 }
 
+/*
 .menu .active {
     color: #419d78;
-    font-weight: bold;
+    font-weight: 700;
 }
+*/
 
 .underline {
     padding-bottom: 5px;
@@ -162,6 +165,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     margin-top: 15px;
 }
 
+/*
 .side {
     position: fixed;
     opacity: 0;
@@ -219,7 +223,6 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     color: #545454;
  }
 
-
 .active_hover, .active_hover:hover {
     background-color: #cbff4d;
     transition: .2s;
@@ -234,11 +237,12 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 .side_btn span {
     margin-left: 75px;
 }   
+*/
 
 /* =============== Intro styles ========================= 
    ========================================================*/
 #intro_wrapper {
-    height: calc(100vh + 100px);
+    height: 100vh;
     padding: 250px 0px 0px;
 }
 
@@ -254,8 +258,8 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 .hello {
     font-size: 55px;
     line-height: 50px;
-    margin-bottom: 40px;
-    font-weight: bold;
+    margin-bottom: 50px;
+    font-weight: 500;
 /*    color: #84dd63;*/
 }
 
@@ -266,7 +270,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 .intro {
     font-size: 28px;
     line-height: 34px;
-    font-weight: bold;
+    font-weight: 500;
 	margin-bottom: 20px;
 }
 
@@ -278,9 +282,20 @@ ul.menu li a:hover, ul.menu li.active_menu a {
    ========================================================*/
 
 #about_wrapper {
-    padding: 150px 0px 50px;
-    min-height: 100vh;
+    padding: 125px 0px 0px;
+    height: calc(100vh - 100px);;
     background: #84dd63;
+}
+
+.skill_container {
+	background: #fff;
+    min-height: 600px;
+    border-radius: 10px;
+    padding: 50px 25px;
+    box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.18);
+    transition: all 300ms;
+    margin: 0 auto;
+    opacity: 0;
 }
 
 .skill_col {
@@ -299,11 +314,10 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     transform: translateY(-15px);
 }
 
-
 .skill_title {
     text-align: center;
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 30px;
     line-height: 40px;
     margin: 0px 0px 20px;
@@ -313,87 +327,133 @@ ul.menu li a:hover, ul.menu li.active_menu a {
    ========================================================*/
 
 #projects_wrapper {
-    padding: 150px 0px 50px;
-    min-height: 100vh;
+    padding: 100px 0px 50px;
+    height: calc(100vh - 100px);
     background: #fff;
 }
 
+#projects_wrapper h2 {
+	opacity: 0;
+    text-align: center;
+	margin-bottom: 50px;
+}
+
+
 .project_tile {
 	opacity: 0;
+/*
     background: #dedede;
     border-radius: 10px;
-    height: 250px;
+    min-height: 250px;
     max-width: 250px;
     margin: 0 auto;
     box-shadow: 8px 8px 8px 0 rgb(0 0 0 / 18%);
+*/
 }
 
 .project_tile img {
+/*
     border-radius: 10px;
     box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.18);
 	display: none;
+*/
+	box-shadow: 8px 8px 8px 0 rgb(0 0 0 / 18%);
 }
 
+.project_info {
+	position: absolute;
+    opacity: 0;
+    top: 0;
+    padding: 25px 25px;
+    background: rgb(0 0 0 / 75%);
+    width: 350px;
+    height: 195px;
+    margin: 0 auto;
+    left: 15px;
+	transition: opacity .5s;
+}
+
+.project_info:hover {
+	opacity: 1;
+	transition: opacity .5s;
+}
+
+.project_info p {
+	color: #fff;
+}
+
+.project_info .button {
+	padding: 6px 25px;
+    font-size: 16px;
+    margin-top: 20px;
+}
 
 /* =============== Contact styles ========================= 
    ========================================================*/
 
 #contact_wrapper {
     width: 100%;
-    min-height: 100vh;
+    height: calc(100vh - 100px);
     color: #fff;
-    padding: 150px 0px;
+    padding: 150px 0px 50px;
     background-color: #545454;    
     text-align: center;
 }
 
 #contact_wrapper p {
     margin-bottom: 25px;
+	opacity: 0;
 }
 
 .contact_title {
     font-size: 50px;
     color: #84dd63;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 60px;
     margin-bottom: 25px;
+	opacity: 0;
 }
-
 
 .social_icons {
     text-align: center;
+	opacity: 0;
 }
 
 .fab {
-    color: #84dd63;
+    color: #cbff4d;
+	background: #419d78;
     font-size: 18px;
-    border: 1.5px solid #84dd63;
+    border: 1.5px solid #419d78;
     margin-right: 5px;
     border-radius: 50%;
-    -webkit-transition: color .5s ease-in-out, border .5s ease-in-out;
-    -moz-transition: color .5s ease-in-out, border .5s ease-in-out;
-    -o-transition: color .5s ease-in-out, border .5s ease-in-out;
-    transition: color .5s ease-in-out, border .5s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .fab:hover {
     color: #419d78;
-    border: 1.5px solid #419d78;
-    -webkit-transition: color .5s ease-in-out, border .5s ease-in-out;
-    -moz-transition: color .5s ease-in-out, border .5s ease-in-out;
-    -o-transition: color .5s ease-in-out, border .5s ease-in-out;
-    transition: color .5s ease-in-out, border .5s ease-in-out;
+	background: #cbff4d;
+    border: 1.5px solid #cbff4d;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .fa-linkedin-in {
     padding: 10px 9px;
 }
+
 .fa-github {
     padding: 10px 9px;
 }
+
 .fa-twitter{
     padding: 10px 8px;
 } 
+
 .fa-instagram {
     padding: 10px 9px;
 }
@@ -402,71 +462,93 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     margin-top: 100px;
 }
 
+/* =============== Default Styles ========================= 
+   ========================================================*/
 
+h1 {
+	color: #545454;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 10px 0px 20px;
+}
+
+h2 {
+	color: #545454;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0px 0px 20px;
+}
+
+h3 {
+	color: #419d78;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0px 0px 10px;
+}
 /* =============== Media Queries ========================= 
    ========================================================*/
 @media only screen and (max-width: 1200px){
-.inner_wrapper {
-    width: 65%;
-}
+	.inner_wrapper {
+		width: 65%;
+	}
 }
     
 @media only screen and (max-width: 1024px){
 
-.home_wrapper {
-    width: 75%;
-}
-    
-.inner_wrapper {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 88px;
-}
-    
+	.home_wrapper {
+		width: 75%;
+	}
+
+	.inner_wrapper {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 88px;
+	}
+
 }
 
 @media only screen and (max-width: 768px) {
-.home_wrapper {
-    width: 90%;
+	.home_wrapper {
+		width: 90%;
+	}
+
+	.inner_wrapper {    
+		width: auto;
+		margin: 0 15px 88px;
+
+		}
+    
+	/*------ Navigation & Header -----------*/
+    
+	.menu-btn {
+		right: 25px;
+		}
+
+	.menu li {
+		float: none;
+		width: 100%;
+		height: 25%;
+		}
+    
 }
-    
-.inner_wrapper {    
-    width: auto;
-    margin: 0 15px 88px;
-    
-    }
-
-    
-/*------ Navigation & Header -----------*/
-    
-.menu-btn {
-    right: 25px;
-    }
-    
-.menu li {
-    float: none;
-    width: 100%;
-    height: 25%;
-    }
-    
-}
-
-
 
 @media only screen and (max-width: 540px) {
 
-ul.menu {
-    font-size: 24px;
-    line-height: 34px;
-}
-    
-.home_wrapper {
-    width: auto;
-    margin: 50px auto 0;
-    padding: 40px 20px;
-}
-.inner_wrapper {    
-    margin: 0;
-}
+	ul.menu {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+	.home_wrapper {
+		width: auto;
+		margin: 50px auto 0;
+		padding: 40px 20px;
+	}
+	.inner_wrapper {    
+		margin: 0;
+	}
 
 }
