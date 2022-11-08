@@ -33,7 +33,7 @@ header {
     width: 100%;
     background: #fff;
     position: fixed;
-    padding: 20px 0px 0px;
+    padding: 15px 0px 0px;
     top: 0;
     left: 0;
     z-index: 9999;
@@ -68,7 +68,7 @@ p {
 .nav_anchor {
     display: block;
     position: relative;
-    top: -125px;
+    top: -120px;
     visibility: hidden;
 }
 
@@ -106,7 +106,7 @@ p {
 }
 
 ul.menu {
-    margin: 25px 0px 0px;
+    margin: 20px 0px 0px;
     float: right;
 }
 
@@ -162,7 +162,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     width: 100%;
     position: relative;
     z-index: 998;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /*
@@ -283,7 +283,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 
 #about_wrapper {
     padding: 125px 0px 0px;
-    height: calc(100vh - 100px);;
+    height: calc(100vh - 90px);;
     background: #84dd63;
 }
 
@@ -310,17 +310,48 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     opacity: 0;
 }
 
-.skill_col.skill_left:hover, .skill_col.skill_right:hover, .skill_col.skill_left.slide-in-left:hover, .skill_col.skill_right.slide-in-right:hover {
-    transform: translateY(-15px);
+.skill_wrapper {
+    padding: 0px 20px;
+}
+
+.skill_container .four.columns:nth-of-type(2) {
+	border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.skill_icon i {
+	border-radius: 50%;
+    border: 5px solid #4fa380;
+    width: 100px;
+    height: 100px;
+    line-height: 90px;
+    font-size: 40px;
+    color: #84dd63;
+}
+
+.skill_icon i:hover {
+    -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
+    animation: pulsate-bck 1s ease-in-out 3 both;
 }
 
 .skill_title {
     text-align: center;
-    color: #000;
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
     margin: 0px 0px 20px;
+}
+
+.skill_header {
+    color: #419d78;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0px 0px 10px;
+}
+
+.skill {
+	opacity: 0;
 }
 
 /* =============== Projects styles ========================= 
@@ -328,7 +359,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 
 #projects_wrapper {
     padding: 100px 0px 50px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 95px);
     background: #fff;
 }
 
@@ -351,12 +382,12 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 */
 }
 
+.project_tile:hover {
+	cursor: pointer;
+}
+
 .project_tile img {
-/*
-    border-radius: 10px;
-    box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.18);
-	display: none;
-*/
+    border-radius: 3px;
 	box-shadow: 8px 8px 8px 0 rgb(0 0 0 / 18%);
 }
 
@@ -370,6 +401,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
     height: 195px;
     margin: 0 auto;
     left: 15px;
+	border-radius: 3px;
 	transition: opacity .5s;
 }
 
@@ -393,7 +425,7 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 
 #contact_wrapper {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 95px);
     color: #fff;
     padding: 150px 0px 50px;
     background-color: #545454;    
@@ -443,19 +475,19 @@ ul.menu li a:hover, ul.menu li.active_menu a {
 }
 
 .fa-linkedin-in {
-    padding: 10px 9px;
+    padding: 10.75px 9.14px;
 }
 
 .fa-github {
-    padding: 10px 9px;
+    padding: 10.75px 8.29px;
 }
 
-.fa-twitter{
-    padding: 10px 8px;
+.fa-codepen{
+    padding: 10.75px 8px;
 } 
 
 .fa-instagram {
-    padding: 10px 9px;
+    padding: 10.75px 9.14px;
 }
 
 .contact_arrow {
@@ -488,8 +520,148 @@ h3 {
     line-height: 26px;
     margin: 0px 0px 10px;
 }
+
+
+/* =============== Mobile Menu ========================= 
+   ========================================================*/
+
+.nav-panel-mobile {
+	width: 100%;
+    background: transparent;
+    height: 40px;
+    position: fixed;
+    z-index: 9999;
+	display: none;
+}
+
+.button_container {
+  	position: fixed;
+    top: 35px;
+    right: 20px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100000;
+    transition: opacity .25s ease;
+}
+
+.button_container.menu_active .top {
+  transform: translateY(8px) translateX(0) rotate(45deg);
+  background: #454545;
+}
+
+.button_container.menu_active .middle {
+  opacity: 0;
+  background: #454545;
+}
+
+.button_container.menu_active .bottom {
+  transform: translateY(-8px) translateX(0) rotate(-45deg);
+  background: #454545;
+}
+
+.button_container span {
+  background: #454545;
+  border: none;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+
+.nav-panel-mobile .button_container span:nth-of-type(2) {
+  top: 8px;
+}
+
+.nav-panel-mobile .button_container span:nth-of-type(3) {
+  top: 16px;
+}
+
+.nav-panel-mobile .overlay {
+	position: fixed;
+	z-index: 999;
+	background: #84dd63;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+}
+.nav-panel-mobile .overlay.open {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+.nav-panel-mobile .overlay.open li {
+  	animation: fadeInRight .5s ease forwards;
+  	animation-delay: .35s;
+}
+.nav-panel-mobile .overlay.open li:nth-of-type(2) {
+  	animation-delay: .45s;
+}
+.nav-panel-mobile .overlay.open li:nth-of-type(3) {
+  	animation-delay: .55s;
+}
+.nav-panel-mobile .overlay.open li:nth-of-type(4) {
+  	animation-delay: .65s;
+}
+
+.nav-panel-mobile .overlay nav {
+	position: relative;
+	height: 70%;
+	top: 60%;
+	transform: translateY(-50%);
+	text-align: center;
+	right: auto;
+}
+
+.nav-panel-mobile .overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.nav-panel-mobile .overlay ul li {
+  	margin: 0 auto 40px;
+    display: block;
+  	height: 25px;
+  	position: relative;
+  	opacity: 0;
+}
+.overlay ul li a {
+	display: block;
+	position: relative;
+	color: #454545;
+	text-transform: uppercase;
+    overflow: hidden;
+    padding-bottom: 5px;
+	font-weight: 600;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
 /* =============== Media Queries ========================= 
    ========================================================*/
+
 @media only screen and (max-width: 1200px){
 	.inner_wrapper {
 		width: 65%;
@@ -510,29 +682,90 @@ h3 {
 
 }
 
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 1335px) {
+	
+}
+
+/* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
-	.home_wrapper {
-		width: 90%;
+	.nav-panel-mobile {
+		display: block;
+	}
+	
+	.menu {
+		display: none;
+	}
+	
+	#intro_wrapper {
+		min-height: 100vh;
+		height: auto;
+		padding: 150px 0px 0px;
+	}
+	
+	.intro {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	
+	.hello {
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+	
+	#about_wrapper {
+		padding: 75px 0px 0px;
+		min-height: calc(100vh - 90px);
+		height: auto;
+	}
+	
+	.skill_container, .skill {
+		opacity: 1;
+	}
+	
+	.skill_container .four.columns:nth-of-type(2) {
+		border-left: none;
+		border-right: none;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.skill_wrapper {
+		padding: 25px 0px;
 	}
 
-	.inner_wrapper {    
-		width: auto;
-		margin: 0 15px 88px;
+	#projects_wrapper {
+		padding: 75px 0px 25px;
+		min-height: calc(100vh - 95px);
+		height: auto;
+	}
+	
+	.project_tile, #projects_wrapper h2 {
+		opacity: 1;
+	}
+	
+	#projects_wrapper .four.columns {
+		margin-bottom: 25px;
+	}
+	
+	#projects_wrapper .row:nth-of-type(1) {
+		margin-bottom: 0px !important;
+	}
+	
+	#contact_wrapper {
+		min-height: calc(100vh - 95px);
+		height: auto;
+		padding: 75px 0px 25px;
+	}
+	
+}
 
-		}
-    
-	/*------ Navigation & Header -----------*/
-    
-	.menu-btn {
-		right: 25px;
-		}
-
-	.menu li {
-		float: none;
-		width: 100%;
-		height: 25%;
-		}
-    
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
 }
 
 @media only screen and (max-width: 540px) {
@@ -552,3 +785,24 @@ h3 {
 	}
 
 }
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	
+	
+	
+}
+
+
+/* iPad in landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { }
+
+/* iPad in portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {  }

@@ -35,6 +35,23 @@
                                 <li><a class="underline scroll fade-in-top delay700" href="#projects_wrapper">Projects</a></li>
                                 <li><a class="underline scroll fade-in-top delay900" href="#contact_wrapper">Contact</a></li>
                             </ul>
+							<div class="nav-panel-mobile mobile">
+								<div class="button_container" id="toggle">
+									<span class="top"></span>
+									<span class="middle"></span>
+									<span class="bottom"></span>
+								</div>
+								<div class="overlay" id="overlay">
+									<nav class="overlay-menu">
+										<ul id="myMenu" class="navbar-nav">
+											<li><a class="underline scroll fade-in-top delay500" href="#intro_wrapper">Home</a></li>
+											<li><a class="underline scroll fade-in-top delay500" href="#about_wrapper">About</a></li>
+											<li><a class="underline scroll fade-in-top delay700" href="#projects_wrapper">Projects</a></li>
+											<li><a class="underline scroll fade-in-top delay900" href="#contact_wrapper">Contact</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -77,12 +94,12 @@
 								<p class="hello tracking-in-expand delay1200"><span>Turner Uligian</span></p>
 
 								<p class="intro fade-in-bottom delay1400">I'm a front-end web developer based in Chicago, Illinois.</p>
-								<p class="intro fade-in-bottom delay1500">My passion is creating interactive websites that enhance the user experience. Currently, I'm focused on building websites, CMS templates/skins, and AMS portals for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
+								<p class="intro fade-in-bottom delay1500">My passion is creating interactive websites that enhance the user experience. Currently, I'm focused on building websites, skins, templates, and themes on a wide range of platforms for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
 							</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="twelve columns center intro_arrow fade-in-bottom delay2000">
+                        <div class="twelve columns center intro_arrow fade-in-bottom delay3000">
                            <a href="#about" class="scroll"><img src="images/down_arrow.png" class="heartbeat"/></a>
                         </div>
                     </div>
@@ -96,32 +113,57 @@
 						<div class="twelve columns">
 							<div class="skill_container delay300">
 								<div class="row">
-									<div class="six columns">
-										<div class="skill_left">
-											<p class="skill_icon center delay400"><img src="images/icon_design.png"/></p>
+									<div class="four columns center">
+										<div class="skill_wrapper">
+											<p class="skill_icon center delay400"><i class="fas fa-pencil-ruler"></i></p>
 											<p class="skill_title delay500">Design</p>
-											<ul class="skill_list delay600">
-												<li>Adobe Photoshop</li>
-												<li>Adobe XD</li>
-												<li>Figma</li>
-											</ul>
+											
+											<p class="skill_header delay600">Design Tools:</p>
+											<p class="skill delay700">
+											Adobe Photoshop<br />
+											Adobe XD<br />
+											Figma<br />
+											Font Awesome
+												
+											</p>
 										</div>
 									</div>
-									<div class="six columns">
-										<div class="skill_right">
-											<p class="skill_icon center delay400"><img src="images/icon_dev.png"/></p>
+									<div class="four columns center">
+										<div class="skill_wrapper">
+											<p class="skill_icon center delay400"><i class="fas fa-code"></i></p>
 											<p class="skill_title delay500">Development</p>
-											<ul class="skill_list delay600">
-												<li>HTML5</li>
-												<li>CSS3
-													<ul>
-														<li>Boostrap</li>
-														<li>Grid</li>
-														<li>Flexbox</li>
-													</ul>
-												</li>
-												<li>jQuery</li>
-											</ul>
+											<p class="skill_header delay600">Languages I speak:</p>
+											<p class="skill delay700" style="margin-bottom: 25px;">HTML, CSS, Sass, Javascript, jQuery, ColdFusion, MySQL</p>
+											<p class="skill_header delay600">Dev Tools:</p>
+											<p class="skill delay700">
+											Boostrap<br />
+											Grid<br />
+											Flexbox<br />
+											Skeleton<br />
+											Github<br />
+											Dreamweaver</p>
+										</div>
+									</div>
+									<div class="four columns center">
+										<div class="skill_wrapper">
+											<p class="skill_icon center delay400"><i class="fas fa-laptop-code"></i></p>
+											<p class="skill_title delay500">Platforms</p>
+											<p class="skill_header delay600">CMS:</p>
+											<p class="skill delay700">
+											DNN, HubSpot, Wordpress
+											</p>
+											
+											<p class="skill_header delay600">AMS:</p>
+											<p class="skill delay700">
+											Socious, HigherLogic, YourMembership, Impexium, MemberSuite, MemberClicks, iMIS	
+											</p>
+											
+											<p class="skill_header delay600">Other:</p>
+											<p class="skill delay700">
+											Lyris<br />
+											Informz<br />
+											Fliplet	
+											</p>
 										</div>
 									</div>
 								</div>
@@ -138,7 +180,7 @@
 					<h2 class="delay200">My Recent Work</h2>
                     <div class="row" style="margin-bottom: 100px;">
                         <div class="four columns">
-                            <div class="project_tile center delay400">
+                            <div class="project_tile center delay400" data-href="http://www.orthonurse.org/">
                                 <img src="images/naon.jpg" alt="NAON" class="img-responsive"/>
 								<div class="project_info">
 									<p>National Association of Orthopaedic Nurses Website</p>
@@ -147,16 +189,16 @@
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center delay500">
+                            <div class="project_tile center delay500" data-href="https://www.eval.org/">
                                 <img src="images/eval.jpg" alt="AEA" class="img-responsive"/>
 								<div class="project_info">
-									<p>American Evaluation Association Website</p>
+									<p>American Evaluation<br />Association Website</p>
 									<a href="https://www.eval.org/" target="_blank" class="button">Visit</a>
 								</div>
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center delay600">
+                            <div class="project_tile center delay600" data-href="https://convention.bscai.org/">
                                 <img src="images/bscai.jpg" alt="BSCAI Conference" class="img-responsive"/>
 								<div class="project_info">
 									<p>Building Service Contactors Assocation International 2022 Conference Website</p>
@@ -167,7 +209,7 @@
                     </div>
                     <div class="row">
                         <div class="four columns">
-                            <div class="project_tile center delay700">
+                            <div class="project_tile center delay700" data-href="https://www.evaluationconference.org/">
                                 <img src="images/eval_conf.jpg" alt="Evaluation Conference" class="img-responsive"/>
 								<div class="project_info">
 									<p>American Evaluation Association 2022 Conference Website</p>
@@ -176,7 +218,7 @@
                             </div>    
                         </div>
                         <div class="four columns">
-                            <div class="project_tile center delay800">
+                            <div class="project_tile center delay800" data-href="https://caate.net/">
                                 <img src="images/caate.jpg" alt="CAATE" class="img-responsive"/>
 								<div class="project_info">
 									<p>Commision on Accreditation of Athletic Training Education Website</p>
@@ -185,10 +227,10 @@
                             </div>    
                         </div>
 						<div class="four columns">
-                            <div class="project_tile center delay900">
+                            <div class="project_tile center delay900" data-href="https://turnerandemily.com/">
                                 <img src="images/te.jpg" alt="Turner and Emily's Wedding" class="img-responsive"/>
 								<div class="project_info">
-									<p>Turner &amp; Emily Uligian's Wedding Website</p>
+									<p>Turner &amp; Emily Uligian's<br />Wedding Website</p>
 									<a href="https://turnerandemily.com/" target="_blank" class="button">Visit</a>
 								</div>
                             </div>    
@@ -209,49 +251,27 @@
                             <p class="contact_text delay400"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
 						</div>
 					</div>	
-<!--
-						<div class="col-md-4">&nbsp;</div>
-						<div class="col-md-4 left">
-							<form action="https://formspree.io/tuligian@gmail.com" method="POST">
-								<div>
-									<input type="hidden" name="_subject" value="[turneruligian.com]">
-									<label for="name">Name</label>
-									<input type="text" name="name">
-								</div>
-								<div>
-									<label for="_replyto">Email</label>
-									<input type="email" name="_replyto">
-								</div>
-								<div>
-									<label for="message">Message</label>
-									<textarea id="message" name="message" rows="5" cols="33"></textarea>
-								</div>
-								<input type="submit" value="Send">
-							</form>
-						</div>
-						<div class="col-md-4">&nbsp;</div>
--->
 					<div class="row">
                         <div class="twelve columns">
                             <div class="social_icons delay500">
-                                <a href="#" class="icon_linkedin">
-                                    <i class="fab fa-linkedin-in fa-lg"></i>
+                                <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank" class="icon_linkedin">
+                                    <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                                 </a>
-                                <a href="#" class="icon_github">
-                                    <i class="fab fa-github fa-lg"></i>
+                                <a href="https://github.com/turneru" target="_blank" class="icon_github">
+                                    <i class="fab fa-github fa-lg" aria-label="GitHub"></i>
                                 </a>
-                                <a href="#" class="icon_twitter">
-                                    <i class="fab fa-twitter fa-lg"></i>
+                                <a href="https://codepen.io/turneru" target="_blank" class="icon_twitter">
+                                    <i class="fab fa-codepen fa-lg" aria-label="Codepen"></i>
                                 </a>
-                                <a href="#" class="icon_instagram">
-                                    <i class="fab fa-instagram fa-lg"></i>
+                                <a href="https://www.instagram.com/turneru/" target="_blank" class="icon_instagram">
+                                    <i class="fab fa-instagram fa-lg" aria-label="Instagram"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="twelve columns center contact_arrow delay800">
-                           <a href="#intro_wrapper" class="scroll"><img src="images/up_arrow.png" class="heartbeat"/></a>
+                           <a href="#intro_wrapper" class="scroll"><img src="images/up_arrow.png" alt="arrow" class="heartbeat"/></a>
                         </div>
                     </div>
                 </div>    
@@ -271,7 +291,7 @@
 							$("ul.menu li").removeClass("active_menu");
 							$(this).parent().addClass("active_menu");
 						}
-					dest=$(this.hash).offset().top - 100;
+					dest=$(this.hash).offset().top - 95;
 				}
 				//go to destination
 				$('html,body').animate({scrollTop:dest}, 100,'linear');
@@ -284,6 +304,24 @@
 			
 			activeSection();
 			
+		});	
+			
+		$(".project_tile").click(function(){
+			window.location = $(this).attr("data-href");
+			return false;
+		}); 	
+			
+		//Mobile Menu Open 
+		$(document).ready(function() {
+			$('.nav-panel-mobile #toggle').click(function() {
+				$(this).toggleClass('menu_active');
+				$('.nav-panel-mobile #overlay').toggleClass('open');
+			});
+
+			$('.nav-panel-mobile a.scroll').click(function() {
+				$('.nav-panel-mobile #toggle').toggleClass('menu_active');
+				$('.nav-panel-mobile #overlay').toggleClass('open');
+			});
 		});	
 		</script>	
     </body>

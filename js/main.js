@@ -18,7 +18,7 @@ function activeSection() {
 		$("#about_wrapper").addClass("active_section");
 		$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active_menu");
 		$("ul.menu li:nth-of-type(1)").addClass("active_menu");
-		$(".skill_container, .skill_left, .skill_right, .skill_icon, .skill_title, .skill_list").addClass("fade-in-bottom");
+		$(".skill_container, .skill_left, .skill_right, .skill_icon, .skill_title, .skill_header, .skill").addClass("fade-in-bottom");
 	}
 
 	else if (isIntoView($("#projects_wrapper"))){
