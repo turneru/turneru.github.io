@@ -183,6 +183,46 @@
 
 					<div class="toggle_info">
 						<div class="projects_container_secondary">
+							<!-- <div class="project_tile delay800">
+								<div class="text_box">
+									<h4>American Society of Extracorporeal Technology</h4>
+									<p>As the front-end developer on this project I worked with the creative team to implement </p>
+									<ul class="stack">
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>jQuery</li>
+									</ul>
+									<div class="external_links">
+										<a href="https://github.com/turneru/AmSECT" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
+										<a href="https://www.amsect.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
+									</div>
+								</div>
+								<div class="image_box">
+									<a target="_blank" href="/">
+										 <img src="images/amsect.jpg" alt="American Society of Extracorporeal Technology Website" class="img-responsive"/>
+									</a>
+								</div>
+							</div>
+                            <div class="project_tile delay800">
+                                <div class="text_box">
+                                    <h4>American Evaluation Association</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                    <ul class="stack">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>jQuery</li>
+                                    </ul>
+                                    <div class="external_links">
+                                        <a href="https://github.com/turneru/AEA" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
+                                        <a href="https://www.eval.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
+                                    </div>
+                                </div>
+                                <div class="image_box">
+                                    <a target="_blank" href="/">
+                                         <img src="images/eval.jpg" alt="AmSECT" class="img-responsive"/>
+                                    </a>
+                                </div>
+                            </div> -->
 							<div class="project_tile delay1000">
 								<div class="text_box">
 									<h4>Turner &amp; Emily Uligian's Wedding</h4>
@@ -392,6 +432,11 @@
                     $(".project_tile:nth-of-type(4)").removeClass("tile_border");
 					$(".toggler h4.more_projects").text("View More");
 				}
+				// if ($(this).prev(".toggle_info").is(':visible')) {
+				// 	$(this).prev(".toggle_info").slideUp(500);
+				// 	$(this).addClass("closed");	
+				// 	$(".toggler h4.more_projects").text("View More");
+				// } 
 				else {
 					$(this).prev(".toggle_info").slideDown(500);
 					$(this).addClass("open");	
