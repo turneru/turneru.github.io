@@ -1,11 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-.fade-in {
-	-webkit-animation: fade-in 1s ease-in-out both;
-	        animation: fade-in 1s ease-in-out both;
-}
-
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;

@@ -10,6 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
+
 		<!-- FONT
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,12 @@
 			var version_date=new Date();
 			document.write('<link href="css/styles.css?v='+ version_date.getMonth() + '.' + version_date.getDate() + '-' + Math.floor(Math.random() * 1000) +'" type="text/css" rel="stylesheet"/>');
 		</script>
+
+		<!--- Animate on Scroll - https://michalsnik.github.io/aos/
+		---------------------------------------------------- -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+
     </head>
     <body>
         <header>
@@ -91,10 +98,10 @@
             <div id="projects_wrapper">
                 <span class="nav_anchor"><a id="projects"></a></span>
                 <div class="container">
-					<h2 class="delay500">Projects</h2>
-					<h3 class="projects_intro center delay700">Here are some of the things I've built recently</h3>
+					<h2 class="" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">Projects</h2>
+					<h3 class="center" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true" data-aos-delay="500">Here are some of the things I've built recently</h3>
 					<div class="projects_container">
-                        <div class="project_tile delay1000">
+                        <div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 							<div class="text_box">
 								<h4>Society for Interventional Oncology</h4>
 								<p>A redesigned website for the Society for Interventional Oncology (SIO), built on DotNetNuke (DNN). As the front-end web developer on this project I collaborated with graphic designers on the creative team, project managers, and the marketing team to implement the final designs from Adobe XD into DNN. The design features a news ticker, large circular video, carousel for upcoming events, and animations using the Animate On Scroll plugin. The site is fully responsive, and is built using SCSS for cleaner more intuitive code.</p>
@@ -115,7 +122,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="project_tile delay1200">
+						<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
 							<div class="text_box">
 								<h4>Neurocritical Care Society</h4>
 								<p>This project involved the implementation of new designs for the Neurocritical Care Society's suite of websites. As the front-end developer, I collaboarated with the creative team and project managers on building out NCS' main site, in addition to their  <a href="https://www.curingcoma.org/" target="_blank"><em>Curing Coma</em> microsite</a>, and <a href="https://currents.neurocriticalcare.org/"><em>Currents</em> content hub</a>. All three sites were built on DNN with cohesive design elements to tie them together. Features include a custom built, searchable, filterable hub of education courses and products, a seprate event design and sub-navigation, and dynamic content displayed on the main site from their other sites.</p>
@@ -128,7 +135,6 @@
 									<a href="https://github.com/turneru/NCS" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 									<a href="https://www.neurocriticalcare.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
                                     <a href="https://xd.adobe.com/view/684e4780-5614-4614-a01d-195a7f23101e-3d1d/grid" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd_icon" /></a>
-                                    <!-- https://xd.adobe.com/view/eda61d0e-27bc-468b-a8f5-cccf0aea4ea6-b8f5/?fullscreen -->
 								</div>
 							</div>
 							<div class="image_box">
@@ -137,7 +143,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="project_tile delay1000">
+						<div class="project_tile" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 							<div class="text_box">
 								<h4>National Association of Orthopaedic Nurses</h4>
 								<p>The website redesign for the National Association of Orthopaedic Nurses, which involved cross-team collaboration between myself as the lead developer with designers, marketers, and the IT manager. Built on DNN, the development included customizing several modules: EasyDNN Rotator as an event carousel, and EasyDNN News as an Education Catalog including search and filter options, as well as a separate instance used for a news blog.</p>
@@ -158,7 +164,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="project_tile delay1000">
+						<div id="tile4" class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
 							<div class="text_box">
 								<h4>Texas Speech-Language Hearing Association</h4>
 								<p>As the front-end developer on this project I worked with the creative team to implement a refreshed and updated design as the client migrated their website to a new platform (DNN). The design included subtle animations in the hero image carousel, icons, and a drawn border animation on several elements. Other features that were built out include a custom mega-menu and a simple event design with a separate subnavigation for those pages.</p>
@@ -183,7 +189,7 @@
 
 					<div class="toggle_info">
 						<div class="projects_container_secondary">
-							<div class="project_tile delay1000">
+							<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 								<div class="text_box">
 									<h4>Turner &amp; Emily Uligian's Wedding</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
@@ -203,7 +209,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="project_tile delay1200">
+							<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 								<div class="text_box">
 									<h4>Scott &amp; Betty's 50th Wedding Anniversary</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
@@ -225,7 +231,7 @@
 							</div>
 						</div>	
 					</div>
-					<div class="toggler delay1000"><h4 class="more_projects">View More</h4></div>
+					<div class="toggler" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500"><h4 class="more_projects">View More</h4></div>
                 </div>
             </div>
 			
@@ -235,15 +241,15 @@
                 <div class="container">
 					<div class="row no-margin">
 						<div class="twelve columns">
-							<h2 class="delay500">About</h2>
-							<h3 class="delay700">I'm a passionate front-end web developer continually learning and growing my abilities to create amazing websites. I have experience with a wide range of tools and platforms, and am excited to continue to develop my skill set.</h3>
+							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">About</h2>
+							<h3 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="800">I'm a passionate front-end web developer continually learning and growing my abilities to create amazing websites. I have experience with a wide range of tools and platforms, and am excited to continue to develop my skill set.</h3>
 						</div>
 					</div>
                     <div class="row">
 						<div class="twelve columns">
-							<div class="skill_container delay1000">
+							<div class="skill_container">
 								<div class="row skill_row">
-									<div class="skill_wrapper delay1200">
+									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1200">
 										<p class="skill_icon center"><i class="fas fa-code"></i></p>
 										<h4>Development</h4>
 										<p class="skill_header">Languages I speak:</p>
@@ -258,8 +264,8 @@
                                         VS Code<br />
 										Dreamweaver</p>
 									</div>
-									<div class="vertical_bar delay1300"></div>
-									<div class="skill_wrapper delay1400">
+									<!-- <div class="vertical_bar delay1300"></div> -->
+									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1400">
 										<p class="skill_icon center"><i class="fas fa-pencil-ruler"></i></p>
 										<h4>Design</h4>
 										<p class="skill_header">Design Tools:</p>
@@ -269,8 +275,8 @@
 										Figma<br />
 										Font Awesome</p>
 									</div>
-									<div class="vertical_bar delay1500"></div>
-									<div class="skill_wrapper delay1600">
+									<!-- <div class="vertical_bar delay1500"></div> -->
+									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1600">
 										<p class="skill_icon center"><i class="fas fa-laptop-code"></i></p>
 										<h4>Platforms</h4>
 										<p class="skill_header">CMS:</p>
@@ -296,14 +302,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
-							<h2 class="contact_title delay500">Let's work together!</h2>
-                            <h3 class="contact_text delay700">Are you looking for a creative front-end developer for your team or project?</h3>
-                            <p class="contact_button delay800"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
+							<h2 data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Let's work together!</h2>
+                            <h3 data-aos-duration="1000" data-aos-once="true" data-aos-delay="800">Are you looking for a creative front-end developer for your team or project?</h3>
+                            <p data-aos-duration="1000" data-aos-once="true" data-aos-delay="900"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
 						</div>
 					</div>	
 					<div class="row">
                         <div class="twelve columns">
-                            <div class="social_icons delay1000">
+                            <div class="social_icons" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200">
                                 <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank" class="icon_linkedin">
                                     <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                                 </a>
@@ -344,8 +350,10 @@
 			&copy; 2023 Turner Uligian - Designed and coded by Turner Uligian
 		</div>
 		
-		
 		<script>
+		//animations
+		AOS.init();	
+
 		//scroll links
 		$(document).ready(function() {	
 			$(".scroll.button").click(function(event){
@@ -400,7 +408,7 @@
 				}
 		  });
 		});	
-			
+			//  data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000"
 		//Mobile Menu Open 
 		$(document).ready(function() {
 			$('.nav-panel-mobile #toggle').click(function() {

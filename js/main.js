@@ -17,16 +17,16 @@ function activeSection() {
 		$("#projects_wrapper").addClass("active_section");
 		$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active_menu");
 		$("ul.menu li:nth-of-type(1)").addClass("active_menu");
-		$("h2, .projects_intro, .project_tile:nth-of-type(1), .project_tile:nth-of-type(2)").addClass("fade-in-bottom");
+		//$("h2, .projects_intro, .project_tile:nth-of-type(1), .project_tile:nth-of-type(2)").addClass("fade-in-bottom");
 	}
 	
-	else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(2)"))){
-		$(".project_tile:nth-of-type(3)").addClass("fade-in-bottom");
-	}
+	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(2)"))){
+	// 	$(".project_tile:nth-of-type(3)").addClass("fade-in-bottom");
+	// }
 	
-	else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(3)"))){
-		$(".project_tile:nth-of-type(4)").addClass("fade-in-bottom");
-	}
+	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(3)"))){
+	// 	$(".project_tile:nth-of-type(4)").addClass("fade-in-bottom");
+	// }
 	
 	else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(4)"))){
 		$(".toggler").addClass("fade-in-bottom");
@@ -37,8 +37,8 @@ function activeSection() {
 		$("#about_wrapper").addClass("active_section");
 		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(3)").removeClass("active_menu");
 		$("ul.menu li:nth-of-type(2)").addClass("active_menu");
-		$("h2, h3").addClass("fade-in-bottom");
-		$(".skill_container, .skill_wrapper").addClass("fade-in-bottom");
+		//$("h2, h3").addClass("fade-in-bottom");
+		//$(".skill_container, .skill_wrapper").addClass("fade-in-bottom");
 	}
 
 	else if (isIntoView($("#contact_wrapper"))){
@@ -46,7 +46,7 @@ function activeSection() {
 		$("#contact_wrapper").addClass("active_section");
 		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(2)").removeClass("active_menu");
 		$("ul.menu li:nth-of-type(3)").addClass("active_menu");
-		$(".contact_title, .contact_text, .contact_button,.social_icons").addClass("fade-in-bottom");
+		//$(".contact_title, .contact_text, .contact_button,.social_icons").addClass("fade-in-bottom");
 	} 
 }
 
