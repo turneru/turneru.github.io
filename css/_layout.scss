@@ -109,10 +109,14 @@ ul.menu {
                     max-width: 75px;
                     height: 2px;
                     background: #84dd63;
+                    -webkit-transform: scaleX(0);
+                    -ms-transform: scaleX(0);
                     transform: scaleX(0);
                 }
 
                 &:hover:before {
+                    -webkit-transform: scaleX(1);
+                    -ms-transform: scaleX(1);
                     transform: scaleX(1);
                 }
             }
@@ -124,6 +128,8 @@ ul.menu {
                 font-weight: 700;
 
                 &.underline:before {
+                    -webkit-transform: scaleX(1);
+                    -ms-transform: scaleX(1);
                     transform: scaleX(1);
                 }
             }
@@ -208,12 +214,16 @@ ul.menu {
             margin: 5px auto 0px;
             height: 3px;
             background: #84dd63;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
             transform: scaleX(0);
             transition: transform .5s ease 1s;
         }
     }
 
     &.active_section h2:after {
+        -webkit-transform: scaleX(100%);
+        -ms-transform: scaleX(100%);
         transform: scaleX(100%);
     }
 
@@ -224,7 +234,7 @@ ul.menu {
     %projects_shared {
         -webkit-margin-before: 3rem;
         display: grid;
-        gap: 4rem;
+        gap: 1rem;
     }
 
     .projects_container {
@@ -286,6 +296,7 @@ ul.menu {
             justify-content: center;
 
             img {
+                -webkit-filter: drop-shadow(0.5em 0.5em 0.25em rgb(132 221 99 / 30%));
                 filter: drop-shadow(0.5em 0.5em 0.25em rgb(132 221 99 / 30%));
                 margin-inline: auto;
                 max-width: 95%;
@@ -293,9 +304,12 @@ ul.menu {
                 transition: all cubic-bezier(.455,.03,.515,.955) .3s;
 
                 &:hover {
+                    -webkit-filter: none;
                     filter: none;
                     box-shadow: 2px 2px 2px 0 rgb(0 0 0 / 10%);
                     opacity: 1;
+                    -webkit-transform: translateY(-0.25em);
+                    -ms-transform: translateY(-0.25em);
                     transform: translateY(-0.25em);
                 }	
             }	
@@ -324,7 +338,7 @@ ul.menu {
     .toggler {
         cursor: pointer;
         text-align: center;
-        opacity: 0;
+        //opacity: 0;
 
         h4 {
             overflow: hidden;
@@ -385,12 +399,16 @@ ul.menu {
             margin: 5px auto 0px;
             height: 3px;
             background: #84dd63;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
             transform: scaleX(0);
             transition: transform .5s ease 1s;
         }
     }
 
     .active_section h2:after {
+        -webkit-transform: scaleX(100%);
+        -ms-transform: scaleX(100%);
         transform: scaleX(100%);
     }
 
@@ -567,6 +585,8 @@ ul.menu {
     .email {
         font-weight: 700;
         text-decoration: none;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
         transform: rotate(90deg);
         transition: all cubic-bezier(.39,.575,.565,1) .2s;
     }	
@@ -608,6 +628,8 @@ ul.menu {
         transition: opacity .25s ease;
 
         &.menu_active .top {
+            -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+            -ms-transform: translateY(8px) translateX(0) rotate(45deg);
             transform: translateY(8px) translateX(0) rotate(45deg);
             background: #454545;
         }
@@ -618,6 +640,8 @@ ul.menu {
         }
 
         &.menu_active .bottom {
+            -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+            -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
             transform: translateY(-8px) translateX(0) rotate(-45deg);
             background: #454545;
         }
@@ -683,6 +707,8 @@ ul.menu {
             position: relative;
             height: 70%;
             top: 60%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             text-align: center;
             right: auto;

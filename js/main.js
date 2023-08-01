@@ -28,9 +28,9 @@ function activeSection() {
 	// 	$(".project_tile:nth-of-type(4)").addClass("fade-in-bottom");
 	// }
 	
-	else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(4)"))){
-		$(".toggler").addClass("fade-in-bottom");
-	}
+	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(4)"))){
+	// 	$(".toggler").addClass("fade-in-bottom");
+	// }
 	
 	else if (isIntoView($("#about_wrapper .nav_anchor"))){
 		$("#projects_wrapper, #contact_wrapper").removeClass("active_section");

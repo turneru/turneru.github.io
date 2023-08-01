@@ -1788,7 +1788,6 @@ ul.menu li.active_menu a.underline:before {
 #projects_wrapper .toggler {
   cursor: pointer;
   text-align: center;
-  opacity: 0;
 }
 #projects_wrapper .toggler h4 {
   overflow: hidden;

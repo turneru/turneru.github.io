@@ -143,7 +143,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="project_tile" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
+						<div class="project_tile" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="800">
 							<div class="text_box">
 								<h4>National Association of Orthopaedic Nurses</h4>
 								<p>The website redesign for the National Association of Orthopaedic Nurses, which involved cross-team collaboration between myself as the lead developer with designers, marketers, and the IT manager. Built on DNN, the development included customizing several modules: EasyDNN Rotator as an event carousel, and EasyDNN News as an Education Catalog including search and filter options, as well as a separate instance used for a news blog.</p>
@@ -164,7 +164,7 @@
 								</a>
 							</div>
 						</div>
-						<div id="tile4" class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
+						<div id="tile4" class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200">
 							<div class="text_box">
 								<h4>Texas Speech-Language Hearing Association</h4>
 								<p>As the front-end developer on this project I worked with the creative team to implement a refreshed and updated design as the client migrated their website to a new platform (DNN). The design included subtle animations in the hero image carousel, icons, and a drawn border animation on several elements. Other features that were built out include a custom mega-menu and a simple event design with a separate subnavigation for those pages.</p>
@@ -187,7 +187,7 @@
 						</div>
 					</div>
 
-					<div class="toggle_info">
+					<div class="toggle_info" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 						<div class="projects_container_secondary">
 							<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
 								<div class="text_box">
@@ -302,14 +302,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
-							<h2 data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Let's work together!</h2>
-                            <h3 data-aos-duration="1000" data-aos-once="true" data-aos-delay="800">Are you looking for a creative front-end developer for your team or project?</h3>
-                            <p data-aos-duration="1000" data-aos-once="true" data-aos-delay="900"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
+							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Let's work together!</h2>
+                            <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="800">Are you looking for a creative front-end developer for your team or project?</h3>
+                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1100"><a class="button" href="mailto:tuligian@gmail.com">Get in Touch</a></p>
 						</div>
 					</div>	
 					<div class="row">
                         <div class="twelve columns">
-                            <div class="social_icons" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200">
+                            <div class="social_icons" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1400">
                                 <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank" class="icon_linkedin">
                                     <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                                 </a>
@@ -373,6 +373,8 @@
 				var dest=0;
 				if ($(this.hash).offset().top > $(document).height()-$(window).height()) {
 					dest=$(document).height()-$(window).height();
+					$("ul.menu li").removeClass("active_menu");
+					$(this).parent().addClass("active_menu");
 				}
 				else {
 					if ($(this).hasClass("underline")) {
