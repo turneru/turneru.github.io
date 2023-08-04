@@ -25,40 +25,49 @@
 			document.write('<link href="css/styles.css?v='+ version_date.getMonth() + '.' + version_date.getDate() + '-' + Math.floor(Math.random() * 1000) +'" type="text/css" rel="stylesheet"/>');
 		</script>
 
-		<!--- Animate on Scroll - https://michalsnik.github.io/aos/
+		<!--- Animate on Scroll - https://michalsnik.github.io/aos/ https://github.com/michalsnik/aos
 		---------------------------------------------------- -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
+		<!--- Typeit - https://www.typeitjs.com/ https://github.com/alexmacarthur/typeit
+		---------------------------------------------------- -->
+		<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     </head>
     <body>
         <header>
             <nav class="top">
                 <div class="row no-margin">
                     <div class="three columns">
-                        <div class="logo fade-in delay200">
-                            <a href="#intro_wrapper" class="scroll"><img src="images/logo_tu.png"></a>
+                        <div class="logo" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200" data-aos-easing="cb-1">
+                            <a href="#intro-wrapper" class="scroll"><img src="images/logo_tu.png"></a>
                         </div>
                     </div>
                     <div class="nine columns">
                         <ul class="menu">
-							<li><a class="underline scroll fade-in-top delay500" href="#projects_wrapper">Projects</a></li>
-                            <li><a class="underline scroll fade-in-top delay700" href="#about_wrapper">About</a></li>
-                            <li><a class="underline scroll fade-in-top delay900" href="#contact_wrapper">Contact</a></li>
+							<li>
+								<a class="underline scroll" href="#projects-wrapper" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500" data-aos-easing="cb-1">Projects</a>
+							</li>
+                            <li>
+								<a class="underline scroll" href="#about-wrapper" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="700" data-aos-easing="cb-1">About</a>
+							</li>
+                            <li>
+								<a class="underline scroll" href="#contact-wrapper" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="900" data-aos-easing="cb-1">Contact</a>
+							</li>
                         </ul>
 						<div class="nav-panel-mobile mobile">
-							<div class="button_container" id="toggle">
+							<div class="button-container" id="toggle">
 								<span class="top"></span>
 								<span class="middle"></span>
 								<span class="bottom"></span>
 							</div>
 							<div class="overlay" id="overlay">
 								<nav class="overlay-menu">
-									<ul id="myMenu" class="navbar-nav">
-										<li><a class="underline scroll" href="#intro_wrapper">Home</a></li>
-										<li><a class="underline scroll" href="#projects_wrapper">Projects</a></li>
-										<li><a class="underline scroll" href="#about_wrapper">About</a></li>
-										<li><a class="underline scroll" href="#contact_wrapper">Contact</a></li>
+									<ul id="mmobile-menu" class="navbar-nav">
+										<li><a class="underline scroll" href="#intro-wrapper">Home</a></li>
+										<li><a class="underline scroll" href="#projects-wrapper">Projects</a></li>
+										<li><a class="underline scroll" href="#about-wrapper">About</a></li>
+										<li><a class="underline scroll" href="#contact-wrapper">Contact</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -67,42 +76,41 @@
                 </div>
             </nav>
         </header>      
-		<div id="main_content">
+		<div id="main-content">
    <!-------------------------- Intro Section ---------------------------------->          
-            <div id="intro_wrapper">
-                <span class="nav_anchor"><a id="intro"></a></span>
+            <div id="intro-wrapper">
+                <span class="nav-anchor"><a id="intro"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
-							<div class="intro_container">
-								<p class="intro tracking-in-expand delay1000">Hi, I'm</p>
-								<p class="hello tracking-in-expand delay1200"><span>Turner Uligian</span></p>
-								<div class="name_border slide-in-left delay1500">
+							<div class="intro-container">
+								<div id="hello"></div>
+								<div id="name"></div>
+								<div class="name-border slide-in-left delay3200">
 									<span class="color-change-3x"></span>
 								</div>
-								<p class="intro fade-in-bottom delay2000">I'm a front-end web developer based in Chicago, Illinois.</p>
-								<p class="intro fade-in-bottom delay2500">My passion is creating functional, interactive websites that enhance the user experience. Currently, I'm focused on building websites, skins, templates, and themes on a wide range of platforms for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
+								<p class="intro" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true" data-aos-delay="2500">I'm a front-end web developer based in Chicago, Illinois.</p>
+								<p class="intro light" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="2800">My passion is creating functional, interactive websites that enhance the user experience. Currently, I'm focused on building websites, skins, templates, and themes on a wide range of platforms for the many clients at <a href="https://www.smithbucklin.com" target="_blank">Smithbucklin</a>.</p>
 							</div>
                         </div>
                     </div>
 					<div class="row">
-                        <div class="twelve columns left fade-in-bottom delay3200">
+                        <div class="twelve columns left" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" data-aos-delay="3000">
                            <a href="#projects" class="scroll button">View My Work</a>
                         </div>
                     </div>
                 </div>    
             </div>
-
 <!-------------------------- Projects Section ---------------------------------->  
 			<!--- Screen size for images 1650x910 --->
-            <div id="projects_wrapper">
-                <span class="nav_anchor"><a id="projects"></a></span>
+            <div id="projects-wrapper">
+                <span class="nav-anchor"><a id="projects"></a></span>
                 <div class="container">
-					<h2 class="" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">Projects</h2>
+					<h2 data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">Projects</h2>
 					<h3 class="center" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true" data-aos-delay="500">Here are some of the things I've built recently</h3>
-					<div class="projects_container">
-                        <div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
-							<div class="text_box">
+					<div class="projects-container">
+                        <div class="project-tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
+							<div class="text-box">
 								<h4>Society for Interventional Oncology</h4>
 								<p>A redesigned website for the Society for Interventional Oncology (SIO), built on DotNetNuke (DNN). As the front-end web developer on this project I collaborated with graphic designers on the creative team, project managers, and the marketing team to implement the final designs from Adobe XD into DNN. The design features a news ticker, large circular video, carousel for upcoming events, and animations using the Animate On Scroll plugin. The site is fully responsive, and is built using SCSS for cleaner more intuitive code.</p>
 								<ul class="stack">
@@ -110,20 +118,20 @@
 									<li>SCSS</li>
 									<li>jQuery</li>
 								</ul>
-								<div class="external_links">
+								<div class="external-links">
 									<a href="https://github.com/turneru/SIO" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 									<a href="https://sio-central.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
-                                    <a href="https://xd.adobe.com/view/6b710770-261d-46bb-8eb3-52ddcde9e37f-3e22/?fullscreen" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd_icon" /></a>
+                                    <a href="https://xd.adobe.com/view/6b710770-261d-46bb-8eb3-52ddcde9e37f-3e22/?fullscreen" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd-icon" /></a>
 								</div>
 							</div>
-							<div class="image_box">
+							<div class="image-box">
 								<a target="_blank" href="https://sio-central.org/">
 									 <img src="images/SIO.jpg" alt="SIO" class="img-responsive"/>
 								</a>
 							</div>
 						</div>
-						<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
-							<div class="text_box">
+						<div class="project-tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
+							<div class="text-box">
 								<h4>Neurocritical Care Society</h4>
 								<p>This project involved the implementation of new designs for the Neurocritical Care Society's suite of websites. As the front-end developer, I collaboarated with the creative team and project managers on building out NCS' main site, in addition to their  <a href="https://www.curingcoma.org/" target="_blank"><em>Curing Coma</em> microsite</a>, and <a href="https://currents.neurocriticalcare.org/"><em>Currents</em> content hub</a>. All three sites were built on DNN with cohesive design elements to tie them together. Features include a custom built, searchable, filterable hub of education courses and products, a seprate event design and sub-navigation, and dynamic content displayed on the main site from their other sites.</p>
 								<ul class="stack">
@@ -131,20 +139,20 @@
 									<li>CSS</li>
 									<li>jQuery</li>
 								</ul>
-								<div class="external_links">
+								<div class="external-links">
 									<a href="https://github.com/turneru/NCS" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 									<a href="https://www.neurocriticalcare.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
-                                    <a href="https://xd.adobe.com/view/684e4780-5614-4614-a01d-195a7f23101e-3d1d/grid" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd_icon" /></a>
+                                    <a href="https://xd.adobe.com/view/684e4780-5614-4614-a01d-195a7f23101e-3d1d/grid" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd-icon" /></a>
 								</div>
 							</div>
-							<div class="image_box">
+							<div class="image-box">
 								<a target="_blank" href="https://www.neurocriticalcare.org/">
 									 <img src="images/NCS.jpg" alt="NCS" class="img-responsive"/>
 								</a>
 							</div>
 						</div>
-						<div class="project_tile" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="800">
-							<div class="text_box">
+						<div class="project-tile" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="800">
+							<div class="text-box">
 								<h4>National Association of Orthopaedic Nurses</h4>
 								<p>The website redesign for the National Association of Orthopaedic Nurses, which involved cross-team collaboration between myself as the lead developer with designers, marketers, and the IT manager. Built on DNN, the development included customizing several modules: EasyDNN Rotator as an event carousel, and EasyDNN News as an Education Catalog including search and filter options, as well as a separate instance used for a news blog.</p>
 								<ul class="stack">
@@ -152,20 +160,20 @@
 									<li>CSS</li>
 									<li>jQuery</li>
 								</ul>
-								<div class="external_links">
+								<div class="external-links">
 									<a href="https://github.com/turneru/NAON" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 									<a href="https://www.orthonurse.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
-                                    <a href="https://xd.adobe.com/view/14d33ace-a735-4551-be60-70857ac7a2a4-4180/" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd_icon" /></a>
+                                    <a href="https://xd.adobe.com/view/14d33ace-a735-4551-be60-70857ac7a2a4-4180/" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd-icon" /></a>
 								</div>
 							</div>
-							<div class="image_box">
-								<a target="_blank" href="/">
+							<div class="image-box">
+								<a target="_blank" href="https://www.orthonurse.org/">
 									 <img src="images/naon.jpg" alt="NAON" class="img-responsive"/>
 								</a>
 							</div>
 						</div>
-						<div id="tile4" class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200">
-							<div class="text_box">
+						<div id="tile4" class="project-tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200">
+							<div class="text-box">
 								<h4>Texas Speech-Language Hearing Association</h4>
 								<p>As the front-end developer on this project I worked with the creative team to implement a refreshed and updated design as the client migrated their website to a new platform (DNN). The design included subtle animations in the hero image carousel, icons, and a drawn border animation on several elements. Other features that were built out include a custom mega-menu and a simple event design with a separate subnavigation for those pages.</p>
 								<ul class="stack">
@@ -173,24 +181,24 @@
 									<li>SCSS</li>
 									<li>jQuery</li>
 								</ul>
-								<div class="external_links">
+								<div class="external-links">
 									<a href="https://github.com/turneru/TSHA" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 									<a href="https://www.txsha.org/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
-									<a href="https://xd.adobe.com/view/90e16a2c-982d-426a-b713-431195f3de01-c5b2/" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd_icon" /></a>
+									<a href="https://xd.adobe.com/view/90e16a2c-982d-426a-b713-431195f3de01-c5b2/" target="_blank"><img src="images/xd.png" alt="XD Designs" title="XD Designs" class="xd-icon" /></a>
 								</div>
 							</div>
-							<div class="image_box">
-								<a target="_blank" href="/">
+							<div class="image-box">
+								<a target="_blank" href="https://www.txsha.org/">
 									 <img src="images/tsha.jpg" alt="Texas Speech-Language Hearing Association" class="img-responsive"/>
 								</a>
 							</div>
 						</div>
 					</div>
 
-					<div class="toggle_info" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
-						<div class="projects_container_secondary">
-							<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
-								<div class="text_box">
+					<div class="toggle-info" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+						<div class="projects-container-secondary">
+							<div class="project-tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
+								<div class="text-box">
 									<h4>Turner &amp; Emily Uligian's Wedding</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 									<ul class="stack">
@@ -198,19 +206,19 @@
 										<li>CSS</li>
 										<li>jQuery</li>
 									</ul>
-									<div class="external_links">
+									<div class="external-links">
 										<a href="https://github.com/turneru/emily-turner" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 										<a href="https://turnerandemily.com/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
 									</div>
 								</div>
-								<div class="image_box">
-									<a target="_blank" href="/">
+								<div class="image-box">
+									<a target="_blank" href="https://turnerandemily.com/">
 										 <img src="images/te.jpg" alt="Turner and Emily's Wedding Website" class="img-responsive"/>
 									</a>
 								</div>
 							</div>
-							<div class="project_tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
-								<div class="text_box">
+							<div class="project-tile" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
+								<div class="text-box">
 									<h4>Scott &amp; Betty's 50th Wedding Anniversary</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 									<ul class="stack">
@@ -218,12 +226,12 @@
 										<li>CSS</li>
 										<li>jQuery</li>
 									</ul>
-									<div class="external_links">
+									<div class="external-links">
 										<a href="https://github.com/turneru/scott-betty" target="_blank"><i class="fab fa-github" alt="Code" title="Code"></i></a>
 										<a href="https://scottandbetty.com/" target="_blank"><i class="fas fa-external-link-alt" alt="Live Site" title="Live Site"></i></a>
 									</div>
 								</div>
-								<div class="image_box">
+								<div class="image-box">
 									<a target="_blank" href="/">
 										 <img src="images/scott_betty.jpg" alt="Scott and Betty's 50th Wedding Anniversary Webiste" class="img-responsive"/>
 									</a>
@@ -231,13 +239,13 @@
 							</div>
 						</div>	
 					</div>
-					<div class="toggler" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500"><h4 class="more_projects">View More</h4></div>
+					<div class="toggler" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500"><h4 class="more-projects">View More</h4></div>
                 </div>
             </div>
 			
 <!-------------------------- About Section ---------------------------------->          
-            <div id="about_wrapper">
-                <span class="nav_anchor"><a id="about"></a></span>
+            <div id="about-wrapper">
+                <span class="nav-anchor"><a id="about"></a></span>
                 <div class="container">
 					<div class="row no-margin">
 						<div class="twelve columns">
@@ -247,14 +255,14 @@
 					</div>
                     <div class="row">
 						<div class="twelve columns">
-							<div class="skill_container">
-								<div class="row skill_row">
-									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1200">
-										<p class="skill_icon center"><i class="fas fa-code"></i></p>
+							<div class="skill-container">
+								<div class="row skill-row">
+									<div class="skill-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1200">
+										<p class="skill-icon center"><i class="fas fa-code"></i></p>
 										<h4>Development</h4>
-										<p class="skill_header">Languages I speak:</p>
+										<p class="skill-header">Languages I speak:</p>
 										<p class="skill" style="margin-bottom: 25px;">HTML, CSS, Sass, Javascript, jQuery, CFML, MySQL</p>
-										<p class="skill_header">Dev Tools:</p>
+										<p class="skill-header">Dev Tools:</p>
 										<p class="skill">
 										Boostrap<br />
 										Grid<br />
@@ -264,26 +272,26 @@
                                         VS Code<br />
 										Dreamweaver</p>
 									</div>
-									<!-- <div class="vertical_bar delay1300"></div> -->
-									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1400">
-										<p class="skill_icon center"><i class="fas fa-pencil-ruler"></i></p>
+									<!-- <div class="vertical-bar delay1300"></div> -->
+									<div class="skill-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1400">
+										<p class="skill-icon center"><i class="fas fa-pencil-ruler"></i></p>
 										<h4>Design</h4>
-										<p class="skill_header">Design Tools:</p>
+										<p class="skill-header">Design Tools:</p>
 										<p class="skill">
 										Adobe XD<br />
 										Adobe Photoshop<br />
 										Figma<br />
 										Font Awesome</p>
 									</div>
-									<!-- <div class="vertical_bar delay1500"></div> -->
-									<div class="skill_wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1600">
-										<p class="skill_icon center"><i class="fas fa-laptop-code"></i></p>
+									<!-- <div class="vertical-bar delay1500"></div> -->
+									<div class="skill-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="1600">
+										<p class="skill-icon center"><i class="fas fa-laptop-code"></i></p>
 										<h4>Platforms</h4>
-										<p class="skill_header">CMS:</p>
+										<p class="skill-header">CMS:</p>
 										<p class="skill">DNN, HubSpot, Wordpress</p>
-										<p class="skill_header">AMS:</p>
+										<p class="skill-header">AMS:</p>
 										<p class="skill">Socious, HigherLogic, YourMembership, Impexium, MemberSuite, MemberClicks, iMIS</p>
-										<p class="skill_header">Other:</p>
+										<p class="skill-header">Other:</p>
 										<p class="skill">
 										Lyris<br />
 										Informz<br />
@@ -297,8 +305,8 @@
             </div>
 			
 <!-------------------------- Contact Section ---------------------------------->             
-            <div id="contact_wrapper">
-                <span class="nav_anchor"><a id="contact"></a></span>
+            <div id="contact-wrapper">
+                <span class="nav-anchor"><a id="contact"></a></span>
                 <div class="container">
                     <div class="row">
                         <div class="twelve columns">
@@ -309,7 +317,7 @@
 					</div>	
 					<div class="row">
                         <div class="twelve columns">
-                            <div class="social_icons" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1400">
+                            <div class="social-icons" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1400">
                                 <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank" class="icon_linkedin">
                                     <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                                 </a>
@@ -329,8 +337,8 @@
             </div>  
         </div>
 <!-------------------------- Footer Section ---------------------------------->   
-		<div class="footer_left delay3500">
-			<div class="social_box">
+		<div class="footer-left delay3800">
+			<div class="social-box">
 				<a href="https://github.com/turneru" target="_blank" class="icon_github">
                     <i class="fab fa-github fa-lg" aria-label="GitHub"></i>
                 </a>
@@ -338,21 +346,42 @@
                     <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                 </a>
 			</div>
-			<div class="vertical_bar"></div>
+			<div class="vertical-bar"></div>
 		</div>
 		
-		<div class="footer_right delay3500">
+		<div class="footer-right delay3800">
 			<a href="mailto:tuligian@gmail.com" class="email" title="tuligian@gmail.com">tuligian@gmail.com</a>
-			<div class="vertical_bar"></div>
+			<div class="vertical-bar"></div>
 		</div>
 		
-		<div class="footer_center">
+		<div class="footer-center">
 			&copy; 2023 Turner Uligian - Designed and coded by Turner Uligian
 		</div>
 		
 		<script>
 		//animations
 		AOS.init();	
+
+		//Intro typing
+		new TypeIt("#hello", {
+			speed: 50,
+			waitUntilVisible: true,
+			cursorSpeed: 5000,
+		})
+		.pause(250)
+		.type("<span class='intro'>Hi, I'm</span>")
+		.go();
+		new TypeIt('#name', {
+			speed: 50,
+			waitUntilVisible: true,
+			cursorSpeed: 5000,
+			afterComplete: async () => {
+			$(".ti-cursor").hide();
+		},
+		})
+		.pause(1050)
+		.type("<span class='hello'><span>Turner Uligian</span></span>")
+		.go();
 
 		//scroll links
 		$(document).ready(function() {	
@@ -373,13 +402,13 @@
 				var dest=0;
 				if ($(this.hash).offset().top > $(document).height()-$(window).height()) {
 					dest=$(document).height()-$(window).height();
-					$("ul.menu li").removeClass("active_menu");
-					$(this).parent().addClass("active_menu");
+					$("ul.menu li").removeClass("active-menu");
+					$(this).parent().addClass("active-menu");
 				}
 				else {
 					if ($(this).hasClass("underline")) {
-							$("ul.menu li").removeClass("active_menu");
-							$(this).parent().addClass("active_menu");
+							$("ul.menu li").removeClass("active-menu");
+							$(this).parent().addClass("active-menu");
 						}
 					dest=$(this.hash).offset().top - 95;
 				}
@@ -392,21 +421,21 @@
 			});	
 			activeSection();
 		});	
-		
+
 		//Projects toggler	
 		$(document).ready(function(){
 			$("div.toggler").click(function() {
-				if ($('.toggle_info').is(':visible')) {
-					$(".toggle_info").slideUp(500);
+				if ($('.toggle-info').is(':visible')) {
+					$(".toggle-info").slideUp(500);
 					$(this).addClass("closed");	
-                    $(".project_tile:nth-of-type(4)").removeClass("tile_border");
-					$(".toggler h4.more_projects").text("View More");
+                    $(".project-tile:nth-of-type(4)").removeClass("tile_border");
+					$(".toggler h4.more-projects").text("View More");
 				}
 				else {
-					$(this).prev(".toggle_info").slideDown(500);
+					$(this).prev(".toggle-info").slideDown(500);
 					$(this).addClass("open");	
-                    $(".project_tile:nth-of-type(4)").addClass("tile_border");
-					$(".toggler h4.more_projects").text("View Less");
+                    $(".project-tile:nth-of-type(4)").addClass("tile_border");
+					$(".toggler h4.more-projects").text("View Less");
 				}
 		  });
 		});	
@@ -414,12 +443,12 @@
 		//Mobile Menu Open 
 		$(document).ready(function() {
 			$('.nav-panel-mobile #toggle').click(function() {
-				$(this).toggleClass('menu_active');
+				$(this).toggleClass('menu-active');
 				$('.nav-panel-mobile #overlay').toggleClass('open');
 			});
 
 			$('.nav-panel-mobile a.scroll').click(function() {
-				$('.nav-panel-mobile #toggle').toggleClass('menu_active');
+				$('.nav-panel-mobile #toggle').toggleClass('menu-active');
 				$('.nav-panel-mobile #overlay').toggleClass('open');
 			});
 		});	

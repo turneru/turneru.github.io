@@ -1,3 +1,20 @@
+
+window.onload = function() {
+	var elements = document.getElementsByClassName('typewrite');
+	for (var i=0; i<elements.length; i++) {
+		var toRotate = elements[i].getAttribute('data-type');
+		var period = elements[i].getAttribute('data-period');
+		if (toRotate) {
+		  new TxtType(elements[i], JSON.parse(toRotate), period);
+		}
+	}
+	// INJECT CSS
+	var css = document.createElement("style");
+	css.type = "text/css";
+	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+	document.body.appendChild(css);
+};
+
 function isIntoView(elem) {
 	var documentViewTop = $(window).scrollTop();
 	var documentViewBottom = documentViewTop + $(window).height();
@@ -7,46 +24,46 @@ function isIntoView(elem) {
 }
 
 function activeSection() {
-	if (isIntoView($("#intro_wrapper"))){
-		$("ul.menu li").removeClass("active_menu");
-		$(".name_border").css("opacity, 1")
+	if (isIntoView($("#intro-wrapper"))){
+		$("ul.menu li").removeClass("active-menu");
+		$(".name-border").css("opacity, 1")
 	} 
 
-	else if (isIntoView($("#projects_wrapper .nav_anchor"))){
-		$("#about_wrapper, #contact_wrapper").removeClass("active_section");
-		$("#projects_wrapper").addClass("active_section");
-		$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active_menu");
-		$("ul.menu li:nth-of-type(1)").addClass("active_menu");
-		//$("h2, .projects_intro, .project_tile:nth-of-type(1), .project_tile:nth-of-type(2)").addClass("fade-in-bottom");
+	else if (isIntoView($("#projects-wrapper .nav-anchor"))){
+		$("#about-wrapper, #contact-wrapper").removeClass("active-section");
+		$("#projects-wrapper").addClass("active-section");
+		$("ul.menu li:nth-of-type(2), ul.menu li:nth-of-type(3)").removeClass("active-menu");
+		$("ul.menu li:nth-of-type(1)").addClass("active-menu");
+		//$("h2, .projects_intro, .project-tile:nth-of-type(1), .project-tile:nth-of-type(2)").addClass("fade-in-bottom");
 	}
 	
-	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(2)"))){
-	// 	$(".project_tile:nth-of-type(3)").addClass("fade-in-bottom");
+	// else if (isIntoView($("#projects-wrapper .project-tile:nth-of-type(2)"))){
+	// 	$(".project-tile:nth-of-type(3)").addClass("fade-in-bottom");
 	// }
 	
-	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(3)"))){
-	// 	$(".project_tile:nth-of-type(4)").addClass("fade-in-bottom");
+	// else if (isIntoView($("#projects-wrapper .project-tile:nth-of-type(3)"))){
+	// 	$(".project-tile:nth-of-type(4)").addClass("fade-in-bottom");
 	// }
 	
-	// else if (isIntoView($("#projects_wrapper .project_tile:nth-of-type(4)"))){
+	// else if (isIntoView($("#projects-wrapper .project-tile:nth-of-type(4)"))){
 	// 	$(".toggler").addClass("fade-in-bottom");
 	// }
 	
-	else if (isIntoView($("#about_wrapper .nav_anchor"))){
-		$("#projects_wrapper, #contact_wrapper").removeClass("active_section");
-		$("#about_wrapper").addClass("active_section");
-		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(3)").removeClass("active_menu");
-		$("ul.menu li:nth-of-type(2)").addClass("active_menu");
+	else if (isIntoView($("#about-wrapper .nav-anchor"))){
+		$("#projects-wrapper, #contact-wrapper").removeClass("active-section");
+		$("#about-wrapper").addClass("active-section");
+		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(3)").removeClass("active-menu");
+		$("ul.menu li:nth-of-type(2)").addClass("active-menu");
 		//$("h2, h3").addClass("fade-in-bottom");
-		//$(".skill_container, .skill_wrapper").addClass("fade-in-bottom");
+		//$(".skill-container, .skill-wrapper").addClass("fade-in-bottom");
 	}
 
-	else if (isIntoView($("#contact_wrapper"))){
-		$("#about_wrapper, #projects_wrapper").removeClass("active_section");
-		$("#contact_wrapper").addClass("active_section");
-		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(2)").removeClass("active_menu");
-		$("ul.menu li:nth-of-type(3)").addClass("active_menu");
-		//$(".contact_title, .contact_text, .contact_button,.social_icons").addClass("fade-in-bottom");
+	else if (isIntoView($("#contact-wrapper"))){
+		$("#about-wrapper, #projects-wrapper").removeClass("active-section");
+		$("#contact-wrapper").addClass("active-section");
+		$("ul.menu li:nth-of-type(1), ul.menu li:nth-of-type(2)").removeClass("active-menu");
+		$("ul.menu li:nth-of-type(3)").addClass("active-menu");
+		//$(".contact_title, .contact_text, .contact_button,.social-icons").addClass("fade-in-bottom");
 	} 
 }
 

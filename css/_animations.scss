@@ -1,6 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
 
+[data-aos="fade-in"] {
+  opacity: 0;
+  transition-property: opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+[data-aos] {
+  body[data-aos-easing="cb-1"] &,
+  &[data-aos][data-aos-easing="cb-1"] {
+    transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  }
+}
+
+.fade-in {
+	-webkit-animation: fade-in .6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in .6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -135,8 +156,8 @@
 }
 
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.2s both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.2s both;
+	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -725,4 +746,8 @@
 .delay3500 {
 	-webkit-animation-delay: 3.5s;
 	animation-delay: 3.5s;
+}
+.delay3800 {
+	-webkit-animation-delay: 3.8s;
+	animation-delay: 3.8s;
 }
