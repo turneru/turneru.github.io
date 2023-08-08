@@ -7,14 +7,14 @@ body,
 html {
     margin: 0;
     font-size: 18px;
-    color: #545454;
+    color: var.$body_color;
     scroll-behavior: smooth;
-	background: #f0f5f0;
+	background: var.$body_bg_color;
 }
 
 header {
     width: 100%;
-	background: #f0f5f0;
+	background: var.$body_bg_color;
     position: fixed;
     padding: 10px 0px 10px;
     top: 0;
@@ -29,23 +29,23 @@ header {
 }
 
 #main-content {
-    color: #545454;
+    color: var.$body_color;
     width: 100%;
     margin: 0px;
     padding: 0px 0px;
 }
 
-a, a:link, a:visited, a > span {
-	position: relative;
-	color:#419d78;
-	text-decoration: none;
-}
+// a, a:link, a:visited, a > span {
+// 	position: relative;
+// 	color:var.$primary_color;
+// 	text-decoration: none;
+// }
 
-a:before, a:after, a > span:before, a > span:after {
-	content: '';
-	position: absolute;
-	transition: transform .5s ease;
-}
+// a:before, a:after, a > span:before, a > span:after {
+// 	content: '';
+// 	position: absolute;
+// 	transition: transform .5s ease;
+// }
 
 .nav-anchor {
     display: block;
@@ -86,12 +86,12 @@ ul.menu {
         }
 
         a {
-            color: #545454;
+            color: var.$body_color;
             vertical-align: middle;
             transition: color .5s;
 
             &:hover {
-                color: #419d78;
+                color: var.$primary_color;
                 font-weight: 700;
             }
 
@@ -104,7 +104,7 @@ ul.menu {
                     width: 100%;
                     max-width: 75px;
                     height: 2px;
-                    background: #84dd63;
+                    background: var.$secondary_color;
                     -webkit-transform: scaleX(0);
                     -ms-transform: scaleX(0);
                     transform: scaleX(0);
@@ -120,7 +120,7 @@ ul.menu {
 
         &.active-menu {
             a {
-                color: #419d78;
+                color: var.$primary_color;
                 font-weight: 700;
 
                 &.underline:before {
@@ -138,7 +138,7 @@ ul.menu {
 #intro-wrapper {
     height: 100vh;
     padding: 250px 0px 0px;
-	background: #f0f5f0;
+	background: var.$body_bg_color;
 
     #hello .ti-cursor{
         font-size: 28px !important;
@@ -146,7 +146,7 @@ ul.menu {
     
     #name .ti-cursor{
         font-size: 55px !important;
-        color: #419d78 !important;
+        color: var.$primary_color !important;
     }
 
     .hello {
@@ -154,7 +154,7 @@ ul.menu {
         line-height: 50px;
         margin-bottom: 0px;
         font-weight: 500;
-        color: #419d78;
+        color: var.$primary_color;
     }
 
     .name-border {
@@ -190,7 +190,7 @@ ul.menu {
 #projects-wrapper {
     padding: 50px 0px 100px;
     min-height: 100vh;
-	background: #f0f5f0;
+	background: var.$body_bg_color;
 
     h2 {
         max-width: fit-content;
@@ -298,8 +298,8 @@ ul.menu {
             li {
                 background-color: rgb(132 221 99 / 75%);
                 border-radius: 0.25em;
-                color: #545454;
-                font-family: 'Fira Mono', monospace;
+                color: var.$body_color;
+                font-family: var.$secondary_font;
                 font-size: 12px;
                 font-weight: 500;
                 letter-spacing: .2px;
@@ -316,12 +316,12 @@ ul.menu {
             overflow: hidden;
             margin: 40px 0px;
             text-align: center;
-            color: #429d78;
+            color: var.$primary_color;
             font-size: 18px;
 
             &:before,
             &:after {
-                background-color: #84dd64;
+                background-color: var.$secondary_color;
                 content: "";
                 display: inline-block;
                 height: 1px;
@@ -353,8 +353,8 @@ ul.menu {
 #about-wrapper {
     margin: 100px 0px 50px;
     min-height: 100vh;
-    background: #84dd63;
-	background: #f0f5f0;
+    background: var.$secondary_color;
+	background: var.$body_bg_color;
 
     h2 {
         //padding-top: 50px;
@@ -373,7 +373,7 @@ ul.menu {
 
     h3 {
         max-width: 1020px;
-        margin: 0 auto;
+        margin: 1em auto 10px;
         text-align: center;
     }
 
@@ -395,12 +395,12 @@ ul.menu {
 
             .skill-icon i {
                 border-radius: 50%;
-                border: 5px solid #4fa380;
+                border: 5px solid var.$primary_color;
                 width: 100px;
                 height: 100px;
                 line-height: 90px;
                 font-size: 40px;
-                color: #84dd63;
+                color: var.$secondary_color;
 
                 &:hover {
                     -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
@@ -416,7 +416,7 @@ ul.menu {
             }
 
             .skill-header {
-                color: #419d78;
+                color: var.$primary_color;
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 26px;
@@ -430,10 +430,10 @@ ul.menu {
    ========================================================*/
 
 %social-shared {
-    color: #cbff4d;
-    background: #419d78;
+    color: var.$tertiary_color;
+    background: var.$primary_color;
     font-size: 18px;
-    border: 1.5px solid #419d78;
+    border: 1.5px solid var.$primary_color;
     border-radius: 50%;
     width: 37px;
     height: 37px;
@@ -446,9 +446,9 @@ ul.menu {
 }
 
 %social-shared-hover {
-    color: #419d78;
-    background: #cbff4d;
-    border: 1.5px solid #cbff4d;
+    color: var.$primary_color;
+    background: var.$tertiary_color;
+    border: 1.5px solid var.$tertiary_color;
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
@@ -459,8 +459,8 @@ ul.menu {
     width: 100%;
     margin: 150px 0px 0px;
     min-height: 65vh;
-    background-color: #545454;
-    background: #f0f5f0;
+    background-color: var.$body_bg_color;
+    background: var.$body_bg_color;
     text-align: center;
 
     h2 {
@@ -478,7 +478,7 @@ ul.menu {
     }
 
     h3 {
-        margin: 0px 0px 50px;
+        margin: 1em 0px 50px;
     }
 
     .social-icons a {
@@ -553,6 +553,10 @@ ul.menu {
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
         transition: all cubic-bezier(.39,.575,.565,1) .2s;
+
+        a:hover {
+            color: var.$secondary_color;
+        }
     }	
 }	
     
@@ -564,7 +568,7 @@ ul.menu {
 }
 
 .vertical-bar {
-    background-color: #419d78;
+    background-color: var.$primary_color;
     height: 4rem;
     width: 1px;
 }	
@@ -595,23 +599,23 @@ ul.menu {
             -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
             -ms-transform: translateY(8px) translateX(0) rotate(45deg);
             transform: translateY(8px) translateX(0) rotate(45deg);
-            background: #454545;
+            background: var.$body_color;
         }
 
         &.menu-active .middle {
             opacity: 0;
-            background: #454545;
+            background: var.$body_color;
         }
 
         &.menu-active .bottom {
             -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
             -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
             transform: translateY(-8px) translateX(0) rotate(-45deg);
-            background: #454545;
+            background: var.$body_color;
         }
 
         span {
-            background: #454545;
+            background: var.$body_color;
             border: none;
             height: 3px;
             width: 100%;
@@ -634,7 +638,7 @@ ul.menu {
     .overlay {
         position: fixed;
         z-index: 999;
-        background: #84dd63;
+        background: var.$secondary_color;
         top: 0;
         left: 0;
         width: 100%;
@@ -696,7 +700,7 @@ ul.menu {
                     a {
                         display: block;
                         position: relative;
-                        color: #454545;
+                        color: var.$body_color;
                         text-transform: uppercase;
                         overflow: hidden;
                         padding-bottom: 5px;

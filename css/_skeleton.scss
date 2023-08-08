@@ -191,7 +191,7 @@ button {
 	color: var.$button_color !important;
 	text-align: center;
 	font-size: var.$button_font_size;
-	font-weight: var.$button_font_weight;
+	font-weight: var.$button_font_weight !important;
 	font-family: var.$primary_font;
 	text-decoration: none !important;
 	white-space: nowrap;
