@@ -1602,12 +1602,19 @@ ul.menu li a {
   vertical-align: middle;
   transition: color 0.5s;
 }
+ul.menu li a:before, ul.menu li a:after, ul.menu li a > span:before, ul.menu li a > span:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
 ul.menu li a:hover {
   color: #419d78;
   font-weight: 700;
+  text-decoration: none;
 }
 ul.menu li a.underline {
   padding-bottom: 5px;
+  position: relative;
 }
 ul.menu li a.underline:before {
   left: 0;
@@ -1722,6 +1729,10 @@ ul.menu li.active-menu a.underline:before {
 }
 #projects-wrapper .project-tile .text-box .external-links i {
   font-size: 25px;
+  transition: all 0.25s ease-in-out;
+}
+#projects-wrapper .project-tile .text-box .external-links i:hover {
+  color: #84dd63;
 }
 #projects-wrapper .project-tile .text-box .external-links .fa-external-link-alt {
   font-size: 22px;
@@ -1729,6 +1740,16 @@ ul.menu li.active-menu a.underline:before {
 #projects-wrapper .project-tile .text-box .external-links .xd-icon {
   max-width: 28px;
   padding-top: 3px;
+}
+#projects-wrapper .project-tile .text-box .external-links .xd-icon.hover {
+  position: relative;
+  left: -28px;
+  top: 0;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+#projects-wrapper .project-tile .text-box .external-links .xd-icon.hover:hover {
+  opacity: 1;
 }
 #projects-wrapper .project-tile .image-box {
   flex-basis: 60%;
@@ -1946,7 +1967,7 @@ ul.menu li.active-menu a.underline:before {
   transform: rotate(90deg);
   transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
 }
-.footer-right .email a:hover {
+.footer-right .email:hover {
   color: #84dd63;
 }
 

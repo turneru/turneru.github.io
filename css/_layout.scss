@@ -35,18 +35,6 @@ header {
     padding: 0px 0px;
 }
 
-// a, a:link, a:visited, a > span {
-// 	position: relative;
-// 	color:var.$primary_color;
-// 	text-decoration: none;
-// }
-
-// a:before, a:after, a > span:before, a > span:after {
-// 	content: '';
-// 	position: absolute;
-// 	transition: transform .5s ease;
-// }
-
 .nav-anchor {
     display: block;
     position: relative;
@@ -90,13 +78,27 @@ ul.menu {
             vertical-align: middle;
             transition: color .5s;
 
+            // a, a:link, a:visited, a > span {
+            // 	position: relative;
+            // 	color:var.$primary_color;
+            // 	text-decoration: none;
+            // }
+
+            &:before, &:after, & > span:before, & > span:after {
+                content: '';
+                position: absolute;
+                transition: transform .5s ease;
+            }
+
             &:hover {
                 color: var.$primary_color;
                 font-weight: 700;
+                text-decoration: none;
             }
 
             &.underline {
                 padding-bottom: 5px;
+                position: relative;
 
                 &:before {
                     left: 0;
@@ -249,6 +251,11 @@ ul.menu {
 
                 i {
                     font-size: 25px;
+                    transition: all .25s ease-in-out;
+
+                    &:hover {
+                        color: var.$secondary_color;
+                    }
                 }
 
                 .fa-external-link-alt {
@@ -258,6 +265,19 @@ ul.menu {
                 .xd-icon {
                     max-width: 28px;
                     padding-top: 3px;
+                    
+                    &.hover {
+                        position: relative;
+                        left: -28px;
+                        top: 0;
+                        opacity: 0;
+                        transition: all .25s ease-in-out;
+                        //transition: opacity 0.25s ease-out;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -554,7 +574,7 @@ ul.menu {
         transform: rotate(90deg);
         transition: all cubic-bezier(.39,.575,.565,1) .2s;
 
-        a:hover {
+        &:hover {
             color: var.$secondary_color;
         }
     }	
