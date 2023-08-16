@@ -273,9 +273,9 @@ Greetings, I'm Turner Uligian – a dedicated front-end web developer rooted in 
 										<p class="skill-icon center"><i class="fas fa-code"></i></p>
 										<h4>Development</h4>
 										<p class="skill-header">Languages I speak:</p>
-										<p class="skill" style="margin-bottom: 25px;">HTML, CSS, Sass, Javascript, jQuery, CFML, MySQL</p>
+										<p class="mb25">HTML, CSS, Sass, Javascript, jQuery, CFML, MySQL</p>
 										<p class="skill-header">Dev Tools:</p>
-										<p class="skill">
+										<p>
 										Boostrap<br />
 										Grid<br />
 										Flexbox<br />
@@ -284,27 +284,25 @@ Greetings, I'm Turner Uligian – a dedicated front-end web developer rooted in 
                                         VS Code<br />
 										Dreamweaver</p>
 									</div>
-									<!-- <div class="vertical-bar delay1300"></div> -->
 									<div class="skill-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1400">
 										<p class="skill-icon center"><i class="fas fa-pencil-ruler"></i></p>
 										<h4>Design</h4>
 										<p class="skill-header">Design Tools:</p>
-										<p class="skill">
+										<p>
 										Adobe XD<br />
 										Adobe Photoshop<br />
 										Figma<br />
 										Font Awesome</p>
 									</div>
-									<!-- <div class="vertical-bar delay1500"></div> -->
 									<div class="skill-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1600">
 										<p class="skill-icon center"><i class="fas fa-laptop-code"></i></p>
 										<h4>Platforms</h4>
 										<p class="skill-header">CMS:</p>
-										<p class="skill">DNN, HubSpot, Wordpress</p>
+										<p>DNN, HubSpot, Wordpress</p>
 										<p class="skill-header">AMS:</p>
-										<p class="skill">Socious, HigherLogic, YourMembership, Impexium, MemberSuite, MemberClicks, iMIS, Rhythm</p>
+										<p>Socious, HigherLogic, YourMembership, Impexium, MemberSuite, MemberClicks, iMIS, Rhythm</p>
 										<p class="skill-header">Other:</p>
-										<p class="skill">
+										<p>
 										Lyris, MailChimp, Informz, Tradewing, Aventri, Fliplet</p>
 									</div>
 								</div>
@@ -328,16 +326,16 @@ Greetings, I'm Turner Uligian – a dedicated front-end web developer rooted in 
 					<div class="row">
                         <div class="twelve columns">
                             <div class="social-icons" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
-                                <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank" class="icon_linkedin">
+                                <a href="https://www.linkedin.com/in/turner-uligian/" target="_blank">
                                     <i class="fab fa-linkedin-in fa-lg" aria-label="LinkedIn"></i>
                                 </a>
-                                <a href="https://github.com/turneru" target="_blank" class="icon_github">
+                                <a href="https://github.com/turneru" target="_blank">
                                     <i class="fab fa-github fa-lg" aria-label="GitHub"></i>
                                 </a>
-                                <a href="https://codepen.io/turneru" target="_blank" class="icon_twitter">
+                                <a href="https://codepen.io/turneru" target="_blank">
                                     <i class="fab fa-codepen fa-lg" aria-label="Codepen"></i>
                                 </a>
-                                <a href="https://www.instagram.com/turneru/" target="_blank" class="icon_instagram">
+                                <a href="https://www.instagram.com/turneru/" target="_blank">
                                     <i class="fab fa-instagram fa-lg" aria-label="Instagram"></i>
                                 </a>
                             </div>
@@ -365,7 +363,7 @@ Greetings, I'm Turner Uligian – a dedicated front-end web developer rooted in 
 		</div>
 		
 		<div class="footer-center">
-			&copy; 2023 Turner Uligian - Designed and coded by Turner Uligian
+			&copy; <span id="year"></span> Turner Uligian - Designed and coded by Turner Uligian
 		</div>
 		
 		<script>
@@ -466,6 +464,12 @@ Greetings, I'm Turner Uligian – a dedicated front-end web developer rooted in 
 				$('.nav-panel-mobile #overlay').toggleClass('open');
 			});
 		});	
+
+		//Copyright year
+		var currentYear = (new Date()).getFullYear();
+		$(document).ready(function() {
+			$("#year").text(currentYear);
+		});
 		</script>	
     </body>
 </html>

@@ -2,6 +2,22 @@
 
 /* Mobile CSS
 ================================================== */
+@media only screen and (max-width: 1350px){
+	.footer-left {
+		left: 0.25em;
+	}
+
+	.footer-right {
+		right: -4.5em;
+	}
+}
+
+@media only screen and (max-width: 1250px){
+	.footer-left, .footer-right {
+		display: none;
+	}
+}
+
 
 /* Smaller than standard 960 (devices and browsers) */
 
@@ -49,24 +65,70 @@
 		}
 	}
 
+	// #projects-wrapper {
+	// 	padding: 75px 0px 25px;
+	// 	height: auto;
+
+	// 	.four.columns {
+	// 		margin-bottom: 25px;
+	// 	}
+
+	// 	.row:nth-of-type(1) {
+	// 		margin-bottom: 0px !important;
+	// 	}
+	// }
+
 	#projects-wrapper {
-		padding: 75px 0px 25px;
+		padding: 0;
+		margin: 100px 0px;
+		min-height: auto;
 		height: auto;
 
-		.four.columns {
-			margin-bottom: 25px;
+		.projects-container {
+			gap: 4rem;
 		}
 
-		.row:nth-of-type(1) {
-			margin-bottom: 0px !important;
+		.project-tile {
+			flex-direction: column-reverse;
+			padding-bottom: 25px;
+			border-bottom: 1px solid var.$secondary_color;
+			
+			&:nth-child(2n) {
+				flex-direction: column-reverse;
+				padding-bottom: 25px;
+				border-bottom: 1px solid var.$secondary_color;
+			}
+
+			&:nth-of-type(4), &:nth-of-type(6) {
+				border-bottom:none;
+			}
+			
+			&.tile-border {
+				border-bottom: 1px solid var.$secondary_color;
+			}
+
+			ul.stack {
+				justify-content: center;
+			}
+	
+			.text-box .external-links {
+				display: flex;
+				gap: 0.75rem;
+				margin-inline: auto;
+			}
+		}
+
+		.toggler h4 {
+			margin-top: 50px;
 		}
 	}
+
 
 	#about-wrapper {
 		padding: 75px 0px 25px;
 		height: auto;
 
-		.skill-container, .skill {
+		.skill-container {
 
 			.skill-row {
 				flex-direction: column;
@@ -95,10 +157,6 @@
 
 	.logo img {
 		max-width: 50px;
-	}
-
-	.footer-left, .footer-right {
-		display: none;
 	}
 
 	#projects-wrapper {
@@ -157,10 +215,6 @@
 
 			.skill-row {
 				margin-bottom: 0;
-	
-				.vertical-bar {
-					display: none;
-				}
 	
 				.skill-icon {
 					margin-bottom: 15px;

@@ -64,7 +64,7 @@ $h5_bottom_margin: 10px;
 $h5_top_margin: 0px;
 
 
-%h2-underline {
+@mixin h2-underline {
     content: '';
     left: 0;
     position: absolute;
@@ -80,7 +80,7 @@ $h5_top_margin: 0px;
 }
 
 
-%h2-underline-active {
+@mixin h2-underline-active {
     -webkit-transform: scaleX(100%);
     -ms-transform: scaleX(100%);
     transform: scaleX(100%);

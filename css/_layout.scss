@@ -74,12 +74,6 @@ ul.menu {
             vertical-align: middle;
             transition: color .5s;
 
-            // a, a:link, a:visited, a > span {
-            // 	position: relative;
-            // 	color:var.$primary_color;
-            // 	text-decoration: none;
-            // }
-
             &:before, &:after, & > span:before, & > span:after {
                 content: '';
                 position: absolute;
@@ -169,6 +163,14 @@ ul.menu {
         }
     }
 
+    #hello span {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
     .intro {
         font-size: 28px;
         line-height: 34px;
@@ -195,39 +197,27 @@ ul.menu {
         margin: 0 auto 20px;
 
         &:after {
-            content: '';
-            left: 0;
-            position: absolute;
-            display: block;
-            width: 100%;
-            margin: 5px auto 0px;
-            height: 3px;
-            background: #84dd63;
-            -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            transform: scaleX(0);
-            transition: transform .5s ease 1s;
+            @include h2-underline;
         }
     }
+
     &.active-section h2:after {
-        -webkit-transform: scaleX(100%);
-        -ms-transform: scaleX(100%);
-        transform: scaleX(100%);
+        @include h2-underline-active;
     }
 
-    %projects-shared {
+    @mixin projects-shared {
         -webkit-margin-before: 3rem;
         display: grid;
         gap: 1rem;
     }
 
     .projects-container {
-        @extend %projects-shared;
+        @include projects-shared;
         grid-template-rows: repeat(4,1fr);
         margin-block-start: 3rem;
 
         &-secondary {
-            @extend %projects-shared;
+            @include projects-shared;
             grid-template-rows: repeat(2,1fr);
             margin-block-start: 4rem;
         }
@@ -254,7 +244,7 @@ ul.menu {
 
             .external-links {
                 display: flex;
-                gap: 0.75rem;
+                gap: 1.5rem;
                 align-items: center;
 
                 i {
@@ -280,7 +270,6 @@ ul.menu {
                         top: 0;
                         opacity: 0;
                         transition: all .25s ease-in-out;
-                        //transition: opacity 0.25s ease-out;
 
                         &:hover {
                             opacity: 1;
@@ -391,25 +380,12 @@ ul.menu {
         text-align: center;
 
         &:after {
-            content: '';
-            left: 0;
-            position: absolute;
-            display: block;
-            width: 100%;
-            margin: 5px auto 0px;
-            height: 3px;
-            background: #84dd63;
-            -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            transform: scaleX(0);
-            transition: transform .5s ease 1s;
+            @include h2-underline;
         }
     }
 
     &.active-section h2:after {
-        -webkit-transform: scaleX(100%);
-        -ms-transform: scaleX(100%);
-        transform: scaleX(100%);
+        @include h2-underline-active;
     }
 
     h3 {
@@ -424,56 +400,62 @@ ul.menu {
         padding: 50px 25px;
         transition: all 300ms;
         margin: 0 auto;
-    }
 
-    .skill-row {
-        display: flex;
-
-        .skill-wrapper {
-            padding: 0px 20px;
-            flex-basis: 33%;
-            text-align: center;
-
-            .skill-icon {
-                margin-bottom: 15px;
-                i {
-                    border-radius: 50%;
-                    border: 5px solid var.$primary_color;
-                    width: 100px;
-                    height: 100px;
-                    line-height: 90px;
-                    font-size: 40px;
-                    color: var.$secondary_color;
+        .skill-row {
+            display: flex;
     
-                    &:hover {
-                        -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
-                        animation: pulsate-bck 1s ease-in-out 3 both;
-                    }
-                } 
-            }
-
-            h4 {
+            .skill-wrapper {
+                padding: 0px 20px;
+                flex-basis: 33%;
                 text-align: center;
-                font-weight: 700;
-                line-height: 40px;
-                margin: 0px 0px 10px;
-            }
-
-            .skill-header {
-                color: var.$primary_color;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 26px;
-                margin: 0px 0px 10px;
+    
+                .skill-icon {
+                    margin-bottom: 15px;
+                    i {
+                        border-radius: 50%;
+                        border: 5px solid var.$primary_color;
+                        width: 100px;
+                        height: 100px;
+                        line-height: 90px;
+                        font-size: 40px;
+                        color: var.$secondary_color;
+        
+                        &:hover {
+                            -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
+                            animation: pulsate-bck 1s ease-in-out 3 both;
+                        }
+                    } 
+                }
+    
+                h4 {
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 40px;
+                    margin: 0px 0px 10px;
+                }
+    
+                .skill-header {
+                    color: var.$primary_color;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin: 0px 0px 10px;
+                }
+    
+                .mb25 {
+                    margin-bottom: 25px;
+                }
             }
         }
     }
+
+    
 }
 
 /* =============== Contact styles ========================= 
    ========================================================*/
 
-%social-shared {
+@mixin social-shared {
     color: var.$tertiary_color;
     background: var.$primary_color;
     font-size: 18px;
@@ -489,7 +471,7 @@ ul.menu {
     display: inline-block;
 }
 
-%social-shared-hover {
+@mixin social-shared-hover {
     color: var.$primary_color;
     background: var.$tertiary_color;
     border: 1.5px solid var.$tertiary_color;
@@ -513,25 +495,12 @@ ul.menu {
         margin: 0 auto 20px;
 
         &:after {
-            content: '';
-            left: 0;
-            position: absolute;
-            display: block;
-            width: 100%;
-            margin: 5px auto 0px;
-            height: 3px;
-            background: #84dd63;
-            -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            transform: scaleX(0);
-            transition: transform .5s ease 1s;
+            @include h2-underline;
         }
     }
 
     &.active-section h2:after {
-        -webkit-transform: scaleX(100%);
-        -ms-transform: scaleX(100%);
-        transform: scaleX(100%);
+        @include h2-underline-active;
     }
 
     h3 {
@@ -539,7 +508,7 @@ ul.menu {
     }
 
     .social-icons a {
-        @extend %social-shared;
+        @include social-shared;
         margin-right: 5px;
 
         i {
@@ -547,7 +516,7 @@ ul.menu {
         }
 
         &:hover {
-            @extend %social-shared-hover;
+            @include social-shared-hover;
         }
 
         &:last-of-type {
@@ -577,14 +546,14 @@ ul.menu {
         gap: 0.75em;
 
         a {
-            @extend %social-shared;
+            @include social-shared;
     
             i {
                 line-height: 37px;
             }
 
             &:hover {
-                @extend %social-shared-hover;
+                @include social-shared-hover;
             }
         }
     }
