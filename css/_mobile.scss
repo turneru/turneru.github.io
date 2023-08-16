@@ -2,40 +2,19 @@
 
 /* Mobile CSS
 ================================================== */
-@media only screen and (max-width: 1200px){
-	.inner_wrapper {
-		width: 65%;
-	}
-}
+
 /* Smaller than standard 960 (devices and browsers) */
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px){}
 
-	.home_wrapper {
-		width: 75%;
-	}
-
-	.inner_wrapper {
-		width: 80%;
-		margin: 0 auto;
-		margin-bottom: 88px;
-	}
-
-}
-
-@media only screen and (max-width: 959px) {
-
-}
+@media only screen and (max-width: 959px) {}
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-
-}
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 1300px) {
-	
-}
+@media only screen and (max-width: 1300px) {}
+
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 	
@@ -47,27 +26,30 @@
 		display: none;
 	}
 	
-	#intro_wrapper {
+	#intro-wrapper {
 		min-height: 100vh;
 		height: auto;
 		padding: 150px 0px 0px;
 
-		.intro {
+		.intro, .intro.light {
 			font-size: 24px;
 			line-height: 28px;
 		}
 		
-		.hello {
-			font-size: 50px;
-			margin-bottom: 30px;
+		#hello {
+			margin-bottom: 20px;
 		}
 
-		.name_border {
+		#name .hello {
+			font-size: 50px;
+		}
+
+		.name-border {
 			width: 100%;
 		}
 	}
 
-	#projects_wrapper {
+	#projects-wrapper {
 		padding: 75px 0px 25px;
 		height: auto;
 
@@ -79,29 +61,24 @@
 			margin-bottom: 0px !important;
 		}
 	}
-	
-	.project_tile, #projects_wrapper h2 {
-		opacity: 1;
-	}
-	
-	#about_wrapper {
+
+	#about-wrapper {
 		padding: 75px 0px 25px;
 		height: auto;
 
-		.skill_container, .skill {
-			opacity: 1;
+		.skill-container, .skill {
 
-			.skill_row {
+			.skill-row {
 				flex-direction: column;
 
-				.skill_wrapper {
+				.skill-wrapper {
 					padding: 25px 0px;
 				}
 			}
 		}
 	}
 	
-	#contact_wrapper {
+	#contact-wrapper {
 		height: auto;
 		padding: 75px 0px 25px;
 	}
@@ -113,24 +90,6 @@
 
 }
 
-@media only screen and (max-width: 540px) {
-
-	ul.menu {
-		font-size: 24px;
-		line-height: 34px;
-	}
-
-	.home_wrapper {
-		width: auto;
-		margin: 50px auto 0;
-		padding: 40px 20px;
-	}
-	.inner_wrapper {    
-		margin: 0;
-	}
-
-}
-
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 
@@ -138,18 +97,21 @@
 		max-width: 50px;
 	}
 
-
-	.footer_left, .footer_right {
+	.footer-left, .footer-right {
 		display: none;
 	}
 
-	#projects_wrapper {
+	#projects-wrapper {
 		padding: 0;
 		margin: 100px 0px;
 		min-height: auto;
 		height: auto;
 
-		.project_tile {
+		.projects-container {
+			gap: 4rem;
+		}
+
+		.project-tile {
 			flex-direction: column-reverse;
 			padding-bottom: 25px;
 			border-bottom: 1px solid var.$secondary_color;
@@ -164,15 +126,15 @@
 				border-bottom:none;
 			}
 			
-			&.tile_border {
+			&.tile-border {
 				border-bottom: 1px solid var.$secondary_color;
 			}
 
-			.stack {
+			ul.stack {
 				justify-content: center;
 			}
 	
-			.text_box .external_links {
+			.text-box .external-links {
 				display: flex;
 				gap: 0.75rem;
 				margin-inline: auto;
@@ -184,23 +146,23 @@
 		}
 	}
 
-	#about_wrapper {
+	#about-wrapper {
 		padding: 0;
 		margin: 100px 0px 0px;
 		min-height: auto;
 		height: auto;
 
-		.skill_container {
+		.skill-container {
 			padding: 50px 25px 0px;
 
-			.skill_row {
+			.skill-row {
 				margin-bottom: 0;
 	
-				.vertical_bar {
+				.vertical-bar {
 					display: none;
 				}
 	
-				.skill_icon {
+				.skill-icon {
 					margin-bottom: 15px;
 				}
 	
@@ -211,7 +173,7 @@
 		}
 	}
 
-	#contact_wrapper {
+	#contact-wrapper {
 		padding: 0;
 		margin: 50px 0px;
 		min-height: auto;

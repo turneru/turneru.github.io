@@ -3,13 +3,9 @@
 
 /* CSS Document */
 
-body,
-html {
+html, body {
     margin: 0;
-    font-size: 18px;
-    color: var.$body_color;
     scroll-behavior: smooth;
-	background: var.$body_bg_color;
 }
 
 header {
@@ -199,12 +195,24 @@ ul.menu {
         margin: 0 auto 20px;
 
         &:after {
-            @extend %h2-underline;
+            content: '';
+            left: 0;
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin: 5px auto 0px;
+            height: 3px;
+            background: #84dd63;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            transition: transform .5s ease 1s;
         }
     }
-
     &.active-section h2:after {
-        @extend %h2-underline-active;
+        -webkit-transform: scaleX(100%);
+        -ms-transform: scaleX(100%);
+        transform: scaleX(100%);
     }
 
     %projects-shared {
@@ -383,12 +391,25 @@ ul.menu {
         text-align: center;
 
         &:after {
-            @extend %h2-underline;
+            content: '';
+            left: 0;
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin: 5px auto 0px;
+            height: 3px;
+            background: #84dd63;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            transition: transform .5s ease 1s;
         }
     }
 
     &.active-section h2:after {
-        @extend %h2-underline-active;
+        -webkit-transform: scaleX(100%);
+        -ms-transform: scaleX(100%);
+        transform: scaleX(100%);
     }
 
     h3 {
@@ -413,19 +434,22 @@ ul.menu {
             flex-basis: 33%;
             text-align: center;
 
-            .skill-icon i {
-                border-radius: 50%;
-                border: 5px solid var.$primary_color;
-                width: 100px;
-                height: 100px;
-                line-height: 90px;
-                font-size: 40px;
-                color: var.$secondary_color;
-
-                &:hover {
-                    -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
-                    animation: pulsate-bck 1s ease-in-out 3 both;
-                }
+            .skill-icon {
+                margin-bottom: 15px;
+                i {
+                    border-radius: 50%;
+                    border: 5px solid var.$primary_color;
+                    width: 100px;
+                    height: 100px;
+                    line-height: 90px;
+                    font-size: 40px;
+                    color: var.$secondary_color;
+    
+                    &:hover {
+                        -webkit-animation: pulsate-bck 1s ease-in-out 3 both;
+                        animation: pulsate-bck 1s ease-in-out 3 both;
+                    }
+                } 
             }
 
             h4 {
@@ -489,12 +513,25 @@ ul.menu {
         margin: 0 auto 20px;
 
         &:after {
-            @extend %h2-underline;
+            content: '';
+            left: 0;
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin: 5px auto 0px;
+            height: 3px;
+            background: #84dd63;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            transition: transform .5s ease 1s;
         }
     }
 
     &.active-section h2:after {
-        @extend %h2-underline-active;
+        -webkit-transform: scaleX(100%);
+        -ms-transform: scaleX(100%);
+        transform: scaleX(100%);
     }
 
     h3 {
