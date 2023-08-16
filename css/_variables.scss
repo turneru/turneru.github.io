@@ -1,15 +1,16 @@
 // Global Variables
 
-// Site Variables
-
+// Site Colors
 $primary_color: #419d78;
 $secondary_color: #84dd63;
 $tertiary_color: #cbff4d;
 $body_color: #545454;
 $alt_color: #8b8f84;
 
+//Content width
 $container_width: 1200px;
 
+//Base Styles
 $base_font_size: 18px;
 $primary_font: 'Roboto', sans-serif;
 $secondary_font: 'Fira Mono', monospace;
@@ -18,11 +19,11 @@ $body_bg_color: #f0f5f0;
 $body_line_spacing: 24px;
 $body_letter_spacing: 1px;
 
-// Heading Variables
-
+//Heading Variables
 $heading_weight: 700;
 $heading_font: $primary_font;
 
+//H1 Styles
 $h1_font: $primary_font;
 $h1_font_size:36px;
 $h1_weight: $heading_weight;
@@ -31,6 +32,7 @@ $h1_line_spacing: 44px;
 $h1_bottom_margin: 20px;
 $h1_top_margin: 10px;
 
+//H2 Styles
 $h2_font: $primary_font;
 $h2_font_size: 50px;
 $h2_weight: $heading_weight;
@@ -39,6 +41,7 @@ $h2_line_spacing: 60px;
 $h2_bottom_margin:25px;
 $h2_top_margin: 0px;
 
+//H3 Styles
 $h3_font: $primary_font;
 $h3_font_size: 24px;
 $h3_weight: $heading_weight;
@@ -47,6 +50,7 @@ $h3_line_spacing: 30px;
 $h3_bottom_margin: 10px;
 $h3_top_margin: 0px;
 
+//H4 Styles
 $h4_font: $primary_font;
 $h4_font_size: 22px;
 $h4_weight: 500;
@@ -55,6 +59,7 @@ $h4_line_spacing: 28px;
 $h4_bottom_margin: 10px;
 $h4_top_margin: 0px;
 
+//H5 Styles
 $h5_font: $primary_font;
 $h5_font_size: 20px;
 $h5_weight: $heading_weight;
@@ -63,41 +68,17 @@ $h5_line_spacing: 26px;
 $h5_bottom_margin: 10px;
 $h5_top_margin: 0px;
 
-
-@mixin h2-underline {
-    content: '';
-    left: 0;
-    position: absolute;
-    display: block;
-    width: 100%;
-    margin: 5px auto 0px;
-    height: 3px;
-    background: #84dd63;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    transform: scaleX(0);
-    transition: transform .5s ease 1s;
-}
-
-
-@mixin h2-underline-active {
-    -webkit-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    transform: scaleX(100%);
-}
-
 //Link Variables
-
 $link_color: $primary_color;
 $link_weight: 500;
 $link_style: none;
 
+//Link Hover Variables
 $link_hover_color: $primary_color;
 $link_hover_weight: 500;
 $link_hover_style: underline;
 
-// Button Variables
-
+//Button Variables
 $button_color: $body_color;
 $button_padding: 12px 50px;
 $button_font: $primary_font;
@@ -106,39 +87,8 @@ $button_font_weight: 700;
 $button_bg_color: $secondary_color;
 $button_border_color: $secondary_color;
 $button_border_radius: 30px;
-
+//Button Hover Variables
 $button_hover_color: #ffffff;
 $button_hover_font_weight: $button_font_weight;
 $button_hover_bg_color: $primary_color;
 $button_hover_border_color: $primary_color;
-
-// Navigation Variables
-
-$nav_bg_color: $primary_color;
-$nav_item_space_between: 20px;
-$nav_alignment: center;
-
-$nav_item_font: $primary_font;
-$nav_item_color: #ffffff;
-$nav_item_font_weight: 700;
-$nav_item_font_size: $base_font_size;
-$nav_item_padding: 10px;
-$nav_item_bg_color: transparent;
-
-$nav_item_hover_color: #ffffff;
-$nav_item_hover_bg_color: $tertiary_color;
-
-$subnav_bg_color: $tertiary_color;
-
-$subnav_item_font: $primary_font;
-$subnav_item_color: #ffffff;
-$subnav_item_font_weight: 400;
-$subnav_item_font_size: $base_font_size;
-$subnav_item_padding: 10px;
-$subnav_item_bg_color: transparent;
-
-$subnav_item_hover_color: #ffffff;
-$subnav_item_hover_bg_color: $primary_color;
-
-// Animation
-//$aos-distance: 350px;

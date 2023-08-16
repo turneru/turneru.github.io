@@ -18,10 +18,6 @@ header {
     z-index: 9999;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-
-    .scrolled {
-        box-shadow: 0px 1px 16px 3px rgb(0 0 0 / 10%);
-    }
 }
 
 #main-content {
@@ -141,7 +137,7 @@ ul.menu {
         color: var.$primary_color !important;
     }
 
-    .hello {
+    .turner {
         font-size: 55px;
         line-height: 50px;
         margin-bottom: 0px;
@@ -186,6 +182,28 @@ ul.menu {
 
 /* =============== Projects styles ========================= 
    ========================================================*/
+
+@mixin h2-underline {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 5px auto 0px;
+    height: 3px;
+    background: #84dd63;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: transform .5s ease 1s;
+}
+
+
+@mixin h2-underline-active {
+    -webkit-transform: scaleX(100%);
+    -ms-transform: scaleX(100%);
+    transform: scaleX(100%);
+}
 
 #projects-wrapper {
     padding: 50px 0px 100px;
