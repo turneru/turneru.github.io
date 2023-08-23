@@ -197,13 +197,18 @@ button {
 	white-space: nowrap;
 	background-color: var.$button_bg_color;
 	border-radius: var.$button_border_radius;
-	border: 1px solid var.$button_border_color;
+	border: 0px solid var.$button_border_color;
 	cursor: pointer;
 	box-sizing: border-box; 
 	margin-top: 0px;
 	margin-bottom: 0px;
 	-webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
+	background: var.$button_bg_color;
+    background: linear-gradient(to right, var.$button_hover_bg_color 50%, var.$button_bg_color 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
 
 	&:hover {
 		color: var.$button_hover_color !important;
@@ -212,6 +217,20 @@ button {
 		background-color: var.$button_hover_bg_color;
 		text-decoration: none !important;
 		outline: 0;
+		background-position: left bottom;
+
+		&:after {
+			color: var.$button_hover_color !important;
+		}
+	}
+
+	&:after {
+		content: "\f178";
+		color: var.$button_color !important;
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		transition: 0.4s ease;
+		margin-left: 10px;
 	}
 }	
 

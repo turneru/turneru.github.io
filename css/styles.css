@@ -503,12 +503,16 @@ button {
   white-space: nowrap;
   background-color: #84dd63;
   border-radius: 30px;
-  border: 1px solid #84dd63;
+  border: 0px solid #84dd63;
   cursor: pointer;
   box-sizing: border-box;
   margin-top: 0px;
   margin-bottom: 0px;
   transition: all 0.3s ease-in-out;
+  background: #84dd63;
+  background: linear-gradient(to right, #419d78 50%, #84dd63 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 }
 .button:hover,
 .btn:hover,
@@ -519,6 +523,22 @@ button:hover {
   background-color: #419d78;
   text-decoration: none !important;
   outline: 0;
+  background-position: left bottom;
+}
+.button:hover:after,
+.btn:hover:after,
+button:hover:after {
+  color: #ffffff !important;
+}
+.button:after,
+.btn:after,
+button:after {
+  content: "\f178";
+  color: #545454 !important;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transition: 0.4s ease;
+  margin-left: 10px;
 }
 
 input,
