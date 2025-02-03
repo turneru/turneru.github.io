@@ -224,20 +224,18 @@ ul.menu {
     }
 
     @mixin projects-shared {
-        -webkit-margin-before: 3rem;
         display: grid;
-        gap: 1rem;
+        margin-top: 50px;
+        gap: 50px;
     }
 
     .projects-container {
         @include projects-shared;
-        grid-template-rows: repeat(4,1fr);
-        margin-block-start: 3rem;
+        //grid-template-rows: repeat(4,1fr);
 
         &-secondary {
             @include projects-shared;
-            grid-template-rows: repeat(2,1fr);
-            margin-block-start: 4rem;
+            //grid-template-rows: repeat(2,1fr);
         }
     }
 
@@ -420,6 +418,8 @@ ul.menu {
 
         .skill-row {
             display: flex;
+            flex-wrap: wrap;
+	        justify-content: space-between;
     
             .skill-wrapper {
                 padding: 0px 20px;

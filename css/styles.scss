@@ -5,14 +5,14 @@
 @use 'skeleton';
 @use 'grid';
 
-// Get those utilities that help your CSS
+// Utilities
 @use 'helpers';
 
 // Base Layout
 @use 'layout';
 
-// Load in all those little fun components
+// Fun components
 @use 'animations';
 
-// Don't forget mobile
+// Media Queries
 @use 'mobile';

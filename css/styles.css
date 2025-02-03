@@ -405,7 +405,7 @@ h3 {
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color: #8b8f84;
+  color: #7a7e73;
   line-height: 30px;
   margin-bottom: 10px;
 }
@@ -423,7 +423,7 @@ h5 {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color: #8b8f84;
+  color: #7a7e73;
   line-height: 26px;
   margin-bottom: 10px;
 }
@@ -1630,18 +1630,14 @@ ul.menu li.active-menu a.underline:before {
   transform: scaleX(100%);
 }
 #projects-wrapper .projects-container {
-  -webkit-margin-before: 3rem;
   display: grid;
-  gap: 1rem;
-  grid-template-rows: repeat(4, 1fr);
-  margin-block-start: 3rem;
+  margin-top: 50px;
+  gap: 50px;
 }
 #projects-wrapper .projects-container-secondary {
-  -webkit-margin-before: 3rem;
   display: grid;
-  gap: 1rem;
-  grid-template-rows: repeat(2, 1fr);
-  margin-block-start: 4rem;
+  margin-top: 50px;
+  gap: 50px;
 }
 #projects-wrapper .project-tile {
   display: flex;
@@ -1800,6 +1796,8 @@ ul.menu li.active-menu a.underline:before {
 }
 #about-wrapper .skill-container .skill-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #about-wrapper .skill-container .skill-row .skill-wrapper {
   padding: 0px 20px;
